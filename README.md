@@ -51,4 +51,12 @@ This function returns a pointer to a null-terminated byte string, which is a dup
 **strcpy**
 The strcpy() function is used to copy strings. It copies string pointed to by source into the destination. This function accepts two arguments of type pointer to char or array of characters and returns a pointer to the first string
 
+**strncpy**
+The strncpy() function is similar to the strcpy() function, except that it copies only the specified number of characters from source string to destination string.
+
+**strcat**
+In C programming, strcat() concatenates (joins) two strings.
+
+The strcat() function is defined in <string.h> header file.
+
 
