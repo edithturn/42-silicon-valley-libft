@@ -1,23 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_test_memcpy.c                                   :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epuclla <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/20 11:02:29 by epuclla           #+#    #+#             */
-/*   Updated: 2020/02/21 10:42:14 by epuclla          ###   ########.fr       */
+/*   Created: 2020/02/21 15:15:47 by epuclla           #+#    #+#             */
+/*   Updated: 2020/02/21 16:59:56 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
-int main()
+#include "libft.h"
+
+void	*ft_memchr(const void *str, int c, size_t n)
 {
-	char csrc[] = "42 Silicon Valley";
-	char cdest[100];
+	unsigned char *ustr;
+	unsigned char uc;
 
-	ft_memcpy(cdest, csrc, strlen(csrc) + 1);
-	printf("Copied string is %s", cdest);
-
-	return 0;
+	ustr = (unsigned char *)str;
+	uc = (unsigned char)c;
+	while (n--)
+	{
+		if (*ustr == uc)
+			return (ustr);
+		ustr++;
+	}
+	return (NULL);
 }

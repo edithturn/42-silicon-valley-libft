@@ -6,20 +6,22 @@
 /*   By: epuclla <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 10:06:43 by epuclla           #+#    #+#             */
-/*   Updated: 2020/02/19 10:08:53 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/02/21 19:00:03 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *dest, char *src)
+#include "libft.h"
+
+char	*ft_strcpy(char *dest, const char *src)
 {
-	int i;
+	size_t i;
 
 	i = 0;
-	while (src[i] != '\0')
+	while (src[i])
 	{
 		dest[i] = src[i];
 		i++;
 	}
-	dest[i + 1] = '\0';
+	dest[i] = '\0';
 	return (dest);
 }

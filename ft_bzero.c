@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epuclla <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/19 09:57:51 by epuclla           #+#    #+#             */
-/*   Updated: 2020/02/19 20:28:09 by epuclla          ###   ########.fr       */
+/*   Created: 2020/02/19 23:19:12 by epuclla           #+#    #+#             */
+/*   Updated: 2020/02/21 10:33:12 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_LIBFT_H
-# define FT_LIBFT_H
+#include "libft.h"
 
-#include <unistd.h>
-#include <stdlib.h>
-#include <string.h>
+void	*ft_bzero(void *str, size_t n)
+{
+	size_t			i;
+	unsigned char	*ptr;
 
-/*Libraries to test*/
-#include <stdio.h>
-
-void *ft_memset(void *src, int x, size_t n);
-char *ft_strncpy(char *dst, char *src, unsigned int len);
-
-#endif
+	i = 0;
+	ptr = (unsigned char *)str;
+	while (n--)
+		ptr[i++] = 0;
+	return (0);
+}
