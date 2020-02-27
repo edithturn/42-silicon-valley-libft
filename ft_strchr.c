@@ -1,25 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_test_ft_strncpy.c                               :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epuclla <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/19 12:06:05 by epuclla           #+#    #+#             */
-/*   Updated: 2020/02/25 11:27:29 by epuclla          ###   ########.fr       */
+/*   Created: 2020/02/22 20:08:44 by epuclla           #+#    #+#             */
+/*   Updated: 2020/02/22 21:59:50 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "libft.h"
 
-int main()
+char	*ft_strchr(const char *s, int c)
 {
-	printf("%s\n", ft_strstr("asdf qwerty", "wer"));
-	printf("%s\n", ft_strstr("asdf qwerty qwerty", "wer"));
-	printf("%s\n", ft_strstr("asdf qwerty", "qwerty1"));
-	printf("%s\n", ft_strstr("", "wer"));
-	printf("%s\n", ft_strstr("asdf qwerty", "zxcv"));
-	printf("%s\n", ft_strstr("asdf qwerty", ""));
+	int i;
 
-	return 0;
+	i = 0;
+	while (s[i] != (char)c)
+		if (!s[i++])
+			return (NULL);
+	return ((char *)&s[i]);
 }

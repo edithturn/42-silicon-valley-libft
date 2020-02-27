@@ -59,4 +59,6 @@ In C programming, strcat() concatenates (joins) two strings.
 
 The strcat() function is defined in <string.h> header file.
 
+**strrchr**
+The strchr() function locates the first occurrence of c (converted to a char) in the string pointed to by s.  The terminating null character is considered to be part of the string; therefore if c is `\0', the functions locate the terminating `\0'
 

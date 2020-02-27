@@ -1,25 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_test_ft_strncpy.c                               :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epuclla <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/19 12:06:05 by epuclla           #+#    #+#             */
-/*   Updated: 2020/02/25 11:27:29 by epuclla          ###   ########.fr       */
+/*   Created: 2020/02/25 19:10:29 by epuclla           #+#    #+#             */
+/*   Updated: 2020/02/26 19:23:02 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "libft.h"
 
-int main()
+int ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	printf("%s\n", ft_strstr("asdf qwerty", "wer"));
-	printf("%s\n", ft_strstr("asdf qwerty qwerty", "wer"));
-	printf("%s\n", ft_strstr("asdf qwerty", "qwerty1"));
-	printf("%s\n", ft_strstr("", "wer"));
-	printf("%s\n", ft_strstr("asdf qwerty", "zxcv"));
-	printf("%s\n", ft_strstr("asdf qwerty", ""));
-
-	return 0;
+	while ((*s1 || *s2) && (n > 0))
+	{
+		if (*s1 == *s2)
+		{
+			s1++;
+			s2++;
+			n--;
+		}
+		else
+			return (*(unsigned char*)s1 - *(unsigned char*)s2);
+	}
+	return (0);
 }
