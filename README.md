@@ -3,7 +3,7 @@ The **libft** project builds a **C library** of elementals function that we coul
 
 ### To compile
 ```
-Example
+**Example**
 gcc -Wall -Wextra -Werror ../ft_memset.c ft_test_memset.c -o ft_memset.c
 ```
 
@@ -12,7 +12,7 @@ gcc -Wall -Wextra -Werror ../ft_memset.c ft_test_memset.c -o ft_memset.c
 norminette -R CheckForbiddenSourceHeader ft_memset.c
 ```
 
-#### To validate
+### To validate
 ```
 Testing suite for 42's libft project
 * https://github.com/alelievr/libft-unit-test
