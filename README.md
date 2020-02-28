@@ -1,22 +1,33 @@
+# libft
+The libft project builds a library of elementals function that we could use in out future projects.
 
 ### To compile
 ```c
-gcc ../ft_strncpy.c *.c -o a
-gcc -Wall -Wextra -Werror ../ft_memchr.c ft_test_memchr.c -o a
+/*example*/
+gcc ../ft_memset.c *.c -o a
+gcc -Wall -Wextra -Werror ../ft_memset.c ft_test_memset.c -o ft_memchr.c
 ```
 
-### Check your formattion with norminette
+### Check formattion with norminette
 ```shell
-norminette -CheckForbiddenSourceHeader
+norminette -R CheckForbiddenSourceHeader ft_memset.c
 ```
 
-**memset**
-memset() is used to fill a block of memory with a particular value.
+### To validate
+```shell
+# Testing suite for 42's libft project
+https://github.com/alelievr/libft-unit-test
 
-void *memset(void *ptr, int x, size_t n);
-- ptr ==> Starting address of memory to be filled
-- x   ==> Value to be filled
-- n   ==> Number of bytes to be filled starting from ptr to be filled
+# Review libft in MockMoulinette
+https://moulibft.com/
+
+# General Revision libft project
+https://github.com/jgigault/42FileChecker
+```
+
+1. **memset**
+void *memset(void *b, int c, size_t len);
+The memset() function writes len bytes of value c (converted to an unsigned char) to the string b.
 
 **bzero**
 The bzero() function shall place n zero-valued bytes in the area pointed to by s.

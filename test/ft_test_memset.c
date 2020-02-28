@@ -6,7 +6,7 @@
 /*   By: epuclla <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 19:26:49 by epuclla           #+#    #+#             */
-/*   Updated: 2020/02/20 20:53:19 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/02/27 20:47:54 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,9 @@
 
 int main()
 {
-	char str[16] = "Learn C at 42SV";
+	char str[] = "HelloWorld";
 	printf("\nBefore memset(): %s\n", str);
-
-	ft_memset(str + 3, '.', 8*sizeof(char));
+	ft_memset(str, '.', 2*sizeof(char));
 	printf("After memset(): %s\n", str);
 
 	return 0;
