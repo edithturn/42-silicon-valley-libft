@@ -1,5 +1,34 @@
 # libft
-The libft project builds a library of elementals function that we could use in out future projects.
+The libft project builds a library of elementals function that we could use in out future projects. Covered functions:
+
+* memset
+* bzero
+* memcpy
+* memccpy
+* memmove
+* memchr
+* memcmpk
+* strlen
+* strdup
+* strcpy
+* strncpy
+* strcat
+* strncat
+* strlcat
+* strchr
+* strrchr
+* strstr
+* strnstr
+* strcmp
+* strncmp
+* atoi
+* isalpha
+* isdigit
+* isalnum
+* isascii
+* isprint
+* toupper
+* tolower
 
 #### To compile
 ```c
@@ -24,6 +53,8 @@ https://moulibft.com/
 # General Revision libft project
 https://github.com/jgigault/42FileChecker
 ```
+
+## Definitions and prototypes
 
 **1. memset**\
 void *memset(void *b, int c, size_t len);\
