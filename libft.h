@@ -6,7 +6,7 @@
 /*   By: epuclla <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 09:57:51 by epuclla           #+#    #+#             */
-/*   Updated: 2020/02/27 21:33:51 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/02/28 12:25:36 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@
 #include <stdio.h>
 
 void *ft_memset(void *b, int c, size_t len);
-char *ft_strncpy(char *dst, char *src, unsigned int len);
-void *ft_bzero(void *str, size_t n);
+void ft_bzero(void *s, size_t n);
+/*char *ft_strncpy(char *dst, char *src, unsigned int len);*/
 void *ft_memcpy(void *dest, void *src, size_t n);
 void *ft_memmove(void*dst, const void *src, size_t len);
 void *ft_memchr(const void *str, int c, size_t n);

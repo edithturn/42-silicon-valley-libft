@@ -28,13 +28,15 @@ General Revision libft project
 
 **1. memset**
 ```c
-void *memset(void *b, int c, size_t len);
+void *ft_memset(void *b, int c, size_t len);
 ```
-The memset() function writes len bytes of value c (converted to an unsigned char) to the string b.
+The ft_memset() function writes len bytes of value c (converted to an unsigned char) to the string b.
 
-**2. bzero**\
-The bzero() function shall place n zero-valued bytes in the area pointed to by s.
-void bzero(void *s, size_t n);
+**2. bzero**
+```c
+void ft_bzero(void *s, size_t n);
+``
+The ft_bzero function Writes zeroes to a byte string.
 
 **memcpy**
 memcpy() is used to copy a block of memory from a location to another. It is declared in string.h
