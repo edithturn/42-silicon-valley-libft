@@ -2,9 +2,8 @@
 The **libft** project builds a **C library** of elementals function that we could use in out future projects. Definitions and prototypes of covered functions at the end of the page.
 
 #### To compile
-```c
-/*example*/
-gcc ../ft_memset.c *.c -o a
+```shell
+# example
 gcc -Wall -Wextra -Werror ../ft_memset.c ft_test_memset.c -o ft_memchr.c
 ```
 
