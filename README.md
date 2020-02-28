@@ -1,34 +1,5 @@
 # libft
-The libft project builds a library of elementals function that we could use in out future projects. Covered functions:
-
-* memset
-* bzero
-* memcpy
-* memccpy
-* memmove
-* memchr
-* memcmpk
-* strlen
-* strdup
-* strcpy
-* strncpy
-* strcat
-* strncat
-* strlcat
-* strchr
-* strrchr
-* strstr
-* strnstr
-* strcmp
-* strncmp
-* atoi
-* isalpha
-* isdigit
-* isalnum
-* isascii
-* isprint
-* toupper
-* tolower
+The **libft** project builds a **C library** of elementals function that we could use in out future projects. Definitions and prototypes of covered functions at the end of the page.
 
 #### To compile
 ```c
@@ -44,6 +15,7 @@ norminette -R CheckForbiddenSourceHeader ft_memset.c
 
 #### To validate
 ```shell
+
 # Testing suite for 42's libft project
 https://github.com/alelievr/libft-unit-test
 
