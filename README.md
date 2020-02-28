@@ -25,11 +25,11 @@ https://moulibft.com/
 https://github.com/jgigault/42FileChecker
 ```
 
-**1. memset**
-	void *memset(void *b, int c, size_t len);
-	The memset() function writes len bytes of value c (converted to an unsigned char) to the string b.
+**1. memset**\
+void *memset(void *b, int c, size_t len);\
+The memset() function writes len bytes of value c (converted to an unsigned char) to the string b.
 
-**bzero**
+**2. bzero**\
 The bzero() function shall place n zero-valued bytes in the area pointed to by s.
 void bzero(void *s, size_t n);
 
