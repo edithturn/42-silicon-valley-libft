@@ -1,19 +1,19 @@
 # libft
 The libft project builds a library of elementals function that we could use in out future projects.
 
-### To compile
+#### To compile
 ```c
 /*example*/
 gcc ../ft_memset.c *.c -o a
 gcc -Wall -Wextra -Werror ../ft_memset.c ft_test_memset.c -o ft_memchr.c
 ```
 
-### Check formattion with norminette
+#### Check formattion with norminette
 ```shell
 norminette -R CheckForbiddenSourceHeader ft_memset.c
 ```
 
-### To validate
+#### To validate
 ```shell
 # Testing suite for 42's libft project
 https://github.com/alelievr/libft-unit-test
@@ -25,7 +25,7 @@ https://moulibft.com/
 https://github.com/jgigault/42FileChecker
 ```
 
-1. **memset**
+**1. memset**
 void *memset(void *b, int c, size_t len);
 The memset() function writes len bytes of value c (converted to an unsigned char) to the string b.
 
