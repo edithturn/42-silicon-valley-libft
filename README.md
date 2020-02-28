@@ -4,7 +4,7 @@ The **libft** project builds a **C library** of elementals function that we coul
 #### To compile
 ```shell
 # example
-gcc -Wall -Wextra -Werror ../ft_memset.c ft_test_memset.c -o ft_memchr.c
+gcc -Wall -Wextra -Werror ../ft_memset.c ft_test_memset.c -o ft_memset.c
 ```
 
 #### Check formattion with norminette
@@ -28,7 +28,9 @@ https://github.com/jgigault/42FileChecker
 ## Definitions and prototypes
 
 **1. memset**\
+```c
 void *memset(void *b, int c, size_t len);\
+```
 The memset() function writes len bytes of value c (converted to an unsigned char) to the string b.
 
 **2. bzero**\
