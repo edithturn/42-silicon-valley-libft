@@ -3,7 +3,7 @@ The **libft** project builds a **C library** of elementals function that we coul
 
 ### To compile
 ```
-**Example**
+Example
 gcc -Wall -Wextra -Werror ../ft_memset.c ft_test_memset.c -o ft_memset.c
 ```
 

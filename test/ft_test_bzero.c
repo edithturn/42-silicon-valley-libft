@@ -6,7 +6,7 @@
 /*   By: epuclla <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 23:47:14 by epuclla           #+#    #+#             */
-/*   Updated: 2020/02/20 20:52:00 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/02/28 12:22:07 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,12 @@
 
 int main()
 {
-	char str[16] = "Learn C at 42SV";
-	printf("\nBefore bzero(): %s\n", str);
-	ft_bzero(str, 2*sizeof(char));
-	printf("After bzero: %s\n", str);
+	char str[12] = "Hello World";
+	char *salve  = str;
+
+	printf("\nBefore bzero(): %s\n", salve);
+	ft_bzero(str + 2, 2*sizeof(char));
+	printf("After bzero: %s\n", salve);
 
 	return 0;
 }
