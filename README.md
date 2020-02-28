@@ -35,7 +35,7 @@ The ft_memset() function writes len bytes of value c (converted to an unsigned c
 **2. bzero**
 ```c
 void ft_bzero(void *s, size_t n);
-``
+```
 The ft_bzero function Writes zeroes to a byte string.
 
 **memcpy**
