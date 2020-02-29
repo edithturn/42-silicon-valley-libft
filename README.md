@@ -63,10 +63,13 @@ void *memchr(const void *str, int c, size_t n)
 ```
 memchr() searches for the first occurrence of the character c (an unsigned char) in the first n bytes of the string pointed to, by the argument str.
 
-**memcmp**
-The C library function int memcmp(const void *str1, const void *str2, size_t n)) compares the first n bytes of memory area str1 and memory area str2.
+**7. memcmp**
+```c
+int memcmp(const void *s1, const void *s2, size_t n);
+```
+The memcmp() function compares byte string s1 against byte string s2.  Both strings are assumed to be n bytes long.
 
-**strlen**
+**8. strlen**
 The strlen() function calculates the length of a given string.The strlen() function is defined in string.h header file. It doesn’t count null character ‘\0’.
 
 **strup**
