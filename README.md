@@ -38,18 +38,24 @@ void ft_bzero(void *s, size_t n);
 ```
 The ft_bzero function Writes zeroes to a byte string.
 
-**memcpy**
-memcpy() is used to copy a block of memory from a location to another. It is declared in string.h
-// Copies "numBytes" bytes from address "from" to address "to"
-void * memcpy(void *to, const void *from, size_t numBytes);
+**3. memcpy**
+```c
+void *memcpy(void *restrict dst, const void *restrict src, size_t n);
+```
+The memcpy() function copies n bytes from memory area src to memory area dst.  If dst and src overlap, behavior is undefined. Applications in which dst and src might overlap should use memmove(3) instead.
 
-**memccpy**
-Here memccpy function shall copy bytes from the memory area src into dest, stopping after the first occurrence of byte c, or after n bytes are copied, whichever comes first. Here character c is also copied.
+**4. memccpy**
+```c
+void * memccpy(void *restrict dst, const void *restrict src, int c, size_t n);
+```
+The memccpy() function copies bytes from string src to string dst.  If the character c (as converted to an unsigned char) occurs in the string src, the copy stops and a pointer to the byte after the copy of c in the string dst is returned.  Otherwise, n bytes are copied, and a NULL pointer is returned.
 
-**memmove**
-memmove() is used to copy a block of memory from a location to another. It is declared in string.h
-How is it different from memcpy()?
-memcpy() simply copies data one by one from one location to another. On the other hand memmove() copies the data first to an intermediate buffer, then from buffer to destination.
+**5. memmove**
+```c
+void * memmove(void *dst, const void *src, size_t len);
+```
+The memmove() function copies len bytes from string src to string dst.  The two strings may overlap; the copy is always done in a non-destructive manner.
+
 
 **memchr**
 memchr() searches for the first occurrence of the character c (an unsigned char) in the first n bytes of the string pointed to, by the argument str.

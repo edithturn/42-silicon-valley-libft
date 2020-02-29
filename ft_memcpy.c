@@ -6,7 +6,7 @@
 /*   By: epuclla <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 10:53:52 by epuclla           #+#    #+#             */
-/*   Updated: 2020/02/21 17:10:24 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/02/28 16:07:21 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	*ft_memcpy(void *dest, void *src, size_t n)
 	while (i < n)
 	{
 		cdest[i] = csrc[i];
-		i += 1;
+		i++;
 	}
 	return (cdest);
 }
