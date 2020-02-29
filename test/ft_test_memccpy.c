@@ -6,7 +6,7 @@
 /*   By: epuclla <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 20:33:27 by epuclla           #+#    #+#             */
-/*   Updated: 2020/02/20 21:57:15 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/02/28 17:01:49 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 int main()
 {
-	char buffer[80];
-	char *string1 = "42 Silicon Valley is Awesome";
-	char *pdest;
+	char dest[80];
+	char *string = "42 Silicon Valley is Awesome";
+	char *new;
 
-	pdest = ft_memccpy(buffer, string1, 'S', 4);
-	*pdest = '\0';
-	printf("%s\n" , buffer);
+	new = ft_memccpy(dest, string, 'S', 4);
+	*new = '\0';
+	printf("%s\n" , dest);
 	return 0;
 
 }
