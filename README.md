@@ -57,9 +57,11 @@ void * memmove(void *dst, const void *src, size_t len);
 The memmove() function copies len bytes from string src to string dst.  The two strings may overlap; the copy is always done in a non-destructive manner.
 
 
-**memchr**
-memchr() searches for the first occurrence of the character c (an unsigned char) in the first n bytes of the string pointed to, by the argument str.
+**6. memchr**
+```c
 void *memchr(const void *str, int c, size_t n)
+```
+memchr() searches for the first occurrence of the character c (an unsigned char) in the first n bytes of the string pointed to, by the argument str.
 
 **memcmp**
 The C library function int memcmp(const void *str1, const void *str2, size_t n)) compares the first n bytes of memory area str1 and memory area str2.
