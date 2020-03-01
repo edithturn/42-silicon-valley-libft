@@ -70,21 +70,34 @@ int memcmp(const void *s1, const void *s2, size_t n);
 The memcmp() function compares byte string s1 against byte string s2.  Both strings are assumed to be n bytes long.
 
 **8. strlen**
+```c
+size_t strlen(const char *s);
+```
 The strlen() function calculates the length of a given string.The strlen() function is defined in string.h header file. It doesn’t count null character ‘\0’.
 
-**strup**
-This function returns a pointer to a null-terminated byte string, which is a duplicate of the string pointed to by s. The memory obtained is done dynamically using malloc and hence it can be freed using free().
+**9. strdup**
+```c
+char *strdup(const char *s1);
+```
+The strdup() function allocates sufficient memory for a copy of the string s1, does the copy, and returns a pointer to it.
 
-**strcpy**
-The strcpy() function is used to copy strings. It copies string pointed to by source into the destination. This function accepts two arguments of type pointer to char or array of characters and returns a pointer to the first string
+**10. strcpy**
+```c
+char * strcpy(char * dst, const char * src);
+```
+The strcpy() functions copy the string src to dst (including the terminating `\0' character.)
 
-**strncpy**
-The strncpy() function is similar to the strcpy() function, except that it copies only the specified number of characters from source string to destination string.
+**11. strcat**
+```c
+char * strncat(char *restrict s1, const char *restrict s2, size_t n);
+```
+The strcat() functions append a copy of the null-terminated string s2 to the end of the null-terminated string s1, then add a termi-nating `\0'.
 
-**strcat**
-In C programming, strcat() concatenates (joins) two strings.
-
-The strcat() function is defined in <string.h> header file.
+**12. strncpy**
+```c
+char * stpncpy(char * dst, const char * src, size_t len);
+```
+The stpcpy() and strcpy() functions copy the string src to dst (including the terminating `\0' character.)
 
 **strrchr**
 The strchr() function locates the first occurrence of c (converted to a char) in the string pointed to by s.  The terminating null character is considered to be part of the string; therefore if c is `\0', the functions locate the terminating `\0'

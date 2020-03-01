@@ -6,13 +6,13 @@
 /*   By: epuclla <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 10:19:33 by epuclla           #+#    #+#             */
-/*   Updated: 2020/02/21 17:44:32 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/02/29 14:41:13 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-char	*ft_strdup(char *src)
+char	*ft_strdup(const char *src)
 {
 	int		i;
 	int		j;

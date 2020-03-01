@@ -6,7 +6,7 @@
 /*   By: epuclla <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 09:57:51 by epuclla           #+#    #+#             */
-/*   Updated: 2020/02/28 22:56:24 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/03/01 00:04:21 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,12 @@ void *ft_memccpy(void *dst, const void *src, int c, size_t n);
 void *ft_memmove(void*dst, const void *src, size_t len);
 void *ft_memchr(const void *str, int c, size_t n);
 int ft_memcmp(const void *s1, const void *s2, size_t n);
-
-int	 ft_strlen(char *str);
-char *ft_strdup(char *src);
+size_t ft_strlen(const char *str);
+char *ft_strdup(const char *src);
 char *ft_strcpy(char *dest, const char *src);
 char *ft_strcat(char *str1, const char *str2);
+char *ft_strncpy(char * dst, const char * src, size_t len);
+
 char *ft_strncat(char *str1, const char *str2, size_t n);
 size_t	ft_strlcat(char *dest, const char *src, size_t size);
 char *ft_strchr(const char *s, int c);

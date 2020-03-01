@@ -6,11 +6,13 @@
 /*   By: epuclla <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 10:53:34 by epuclla           #+#    #+#             */
-/*   Updated: 2020/02/22 11:01:41 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/02/29 16:35:16 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncpy(char *dst, char *src, unsigned int len)
+#include "libft.h"
+
+char	*ft_strncpy(char *dst, const char *src, size_t len)
 {
 	unsigned int i;
 
@@ -21,6 +23,9 @@ char	*ft_strncpy(char *dst, char *src, unsigned int len)
 		i += 1;
 	}
 	while (i < len)
-		dst[i++] = '\0';
+	{
+		dst[i] = '\0';
+		i++;
+	}
 	return (dst);
 }
