@@ -6,15 +6,15 @@
 /*   By: epuclla <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/27 12:30:53 by epuclla           #+#    #+#             */
-/*   Updated: 2020/02/27 12:43:36 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/03/02 13:24:15 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
-	if(c >= 48 && c <= 57 )
+	if (c >= 48 && c <= 57)
 		return (1);
 	else
 		return (0);

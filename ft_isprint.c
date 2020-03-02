@@ -6,15 +6,15 @@
 /*   By: epuclla <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/27 13:59:37 by epuclla           #+#    #+#             */
-/*   Updated: 2020/02/27 14:22:28 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/03/02 13:28:38 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
-	if(c >= 32 && c <= 126)
+	if (c >= 32 && c <= 126)
 		return (1);
 	else
 		return (0);
