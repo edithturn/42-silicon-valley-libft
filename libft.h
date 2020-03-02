@@ -6,7 +6,7 @@
 /*   By: epuclla <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 09:57:51 by epuclla           #+#    #+#             */
-/*   Updated: 2020/03/01 00:04:21 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/03/01 20:13:53 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 #include <unistd.h>
 #include <stdlib.h>
-#include <string.h>
 
 /*Libraries to test*/
 #include <stdio.h>
