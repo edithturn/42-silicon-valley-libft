@@ -6,7 +6,7 @@
 /*   By: epuclla <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 11:03:44 by epuclla           #+#    #+#             */
-/*   Updated: 2020/03/02 10:57:33 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/03/03 17:23:17 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ void	*ft_memset(void *b, int c, size_t len)
 	ptr = (unsigned char *)b;
 	while (len > 0)
 	{
-		*ptr = (unsigned char)c;
-		len--;
-		ptr++;
+		*ptr = c;
+		 len--;
+		 ptr++;	
 	}
-	return (b);
+	return (ptr);
 }
