@@ -6,7 +6,7 @@
 /*   By: epuclla <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 10:53:52 by epuclla           #+#    #+#             */
-/*   Updated: 2020/02/28 21:44:04 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/03/05 22:43:19 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,20 @@
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	size_t		i;
-	char		*csrc;
-	char		*cdst;
+	unsigned char		*csrc;
+	unsigned char		*cdst;
 
 	i = 0;
-	csrc = (char *)src;
-	cdst = (char *)dst;
+	csrc = (unsigned char *)src;
+	cdst = (unsigned char *)dst;
+	
+	if (cdst == NULL && csrc == NULL)
+        return NULL;
+	
 	while (i < n)
 	{
 		cdst[i] = csrc[i];
 		i++;
 	}
-	return (cdst);
+	return (dst);
 }
