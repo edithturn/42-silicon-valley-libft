@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_test_memcpy.c                                   :+:      :+:    :+:   */
+/*   ft_test_strcpy.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epuclla <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/20 11:02:29 by epuclla           #+#    #+#             */
-/*   Updated: 2020/02/28 16:23:39 by epuclla          ###   ########.fr       */
+/*   Created: 2020/02/21 17:45:06 by epuclla           #+#    #+#             */
+/*   Updated: 2020/02/29 14:55:02 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
+
 int main()
 {
-	char csrc[] = "42 Silicon Valley";
-	char cdest[100];
-
-	ft_memcpy(cdest, csrc, strlen(csrc) + 1);
-	printf("Copied string is %s", cdest);
-
-	return 0;
+	char str1[10]= "awesome";
+	char str2[10];
+	char str3[10];
+	
+	ft_strcpy(str2, str1);
+	ft_strcpy(str3, "well");
+	printf("%s", str2);
+	printf("%s", "\n");
+	printf("%s", str3);
+	return (0);
 }

@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_test_memcpy.c                                   :+:      :+:    :+:   */
+/*   ft_test_isalnum.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epuclla <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/20 11:02:29 by epuclla           #+#    #+#             */
-/*   Updated: 2020/02/28 16:23:39 by epuclla          ###   ########.fr       */
+/*   Created: 2020/02/27 13:32:26 by epuclla           #+#    #+#             */
+/*   Updated: 2020/02/27 13:48:25 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
+
 int main()
 {
-	char csrc[] = "42 Silicon Valley";
-	char cdest[100];
+	char c = '-';
+	int n;
 
-	ft_memcpy(cdest, csrc, strlen(csrc) + 1);
-	printf("Copied string is %s", cdest);
-
-	return 0;
+	n = ft_isalnum(c);
+	printf("%d", n);
+	
+	return (0);
 }
