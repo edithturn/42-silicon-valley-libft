@@ -12,23 +12,24 @@
 
 #include "libft.h"
 
-char	*ft_strstr(const char *str, const char *to_find)
+char	*ft_strstr(const char *src, const char *find)
 {
 	unsigned int n;
 	unsigned int i;
 
-	if (!*to_find)
-		return ((char*)str);
+	if (find == '\0')
+		return ((char*)src);
 	n = 0;
-	while (str[n] != '\0')
+	i = 0;
+	while (src[n] != '\0')
 	{
-		if (str[n] == to_find[0])
+		if (src[n] == find[0])
 		{
 			i = 1;
-			while (to_find[i] != '\0' && str[n + i] == to_find[i])
+			while (find[i] != '\0' && src[n + i] == find[i])
 				i++;
-			if (to_find[i] == '\0')
-				return ((char*)to_find);
+			if (find[i] == '\0')
+				return ((char*)find);
 		}
 		n++;
 	}
