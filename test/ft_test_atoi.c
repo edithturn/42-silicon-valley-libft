@@ -14,9 +14,14 @@
 
 int main()
 {
-	char *s = "ia";
+	char *s = "214748364999";
 	int n;
+	int p;
+
 	n = ft_atoi(s);
+	p = atoi(s);
 	printf("%d", n);
+	printf("%c", '\n');
+	printf("%d", p);
 	return (0);
 }
