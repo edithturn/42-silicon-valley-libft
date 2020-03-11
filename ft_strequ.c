@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strequ.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epuclla <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/19 10:16:45 by epuclla           #+#    #+#             */
-/*   Updated: 2020/03/10 22:31:47 by epuclla          ###   ########.fr       */
+/*   Created: 2020/03/10 23:25:38 by epuclla           #+#    #+#             */
+/*   Updated: 2020/03/10 23:29:41 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+int ft_strequ(char const *s1, char const *s2)
 {
-	size_t i;
-
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
+	if(s1 == NULL || s2 == NULL)
+		return;
+	if(ft_strcmp(s1, s2) == 0)
+		return 1;
+	else
+		return 0;
 }

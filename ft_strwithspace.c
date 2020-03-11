@@ -1,23 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strwithspace.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epuclla <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/19 10:16:45 by epuclla           #+#    #+#             */
-/*   Updated: 2020/03/10 22:31:47 by epuclla          ###   ########.fr       */
+/*   Created: 2020/03/11 00:08:51 by epuclla           #+#    #+#             */
+/*   Updated: 2020/03/11 00:09:59 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft"
 
-size_t	ft_strlen(const char *str)
+int ft_strwithspace(char c)
 {
-	size_t i;
-
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
+	return (c == '' || c == '\t' || c == '\n');
 }

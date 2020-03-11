@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strnequ.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epuclla <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/19 10:16:45 by epuclla           #+#    #+#             */
-/*   Updated: 2020/03/10 22:31:47 by epuclla          ###   ########.fr       */
+/*   Created: 2020/03/10 23:29:54 by epuclla           #+#    #+#             */
+/*   Updated: 2020/03/10 23:32:24 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+int ft_strnequ(char const *s1, char const *s2, size_t n)
 {
-	size_t i;
-
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
+	if(s1 == NULL || s2 == NULL)
+		return;
+	if(ft_strncmp(s1, s2, n) == 0)
+		return 1;
+	else
+		return 0;
 }

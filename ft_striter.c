@@ -1,23 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_striter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epuclla <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/19 10:16:45 by epuclla           #+#    #+#             */
-/*   Updated: 2020/03/10 22:31:47 by epuclla          ###   ########.fr       */
+/*   Created: 2020/03/10 22:34:42 by epuclla           #+#    #+#             */
+/*   Updated: 2020/03/10 22:41:12 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+void ft_striter(char *s, void (*f)(char *))
 {
-	size_t i;
+	int i;
 
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
+	if(s != NULL && f != NULL)
+	{
+		i = 0;
+		while(s[i])
+		{
+			f(s[i]);
+			i++;
+		}
+	}
+
 }

@@ -1,23 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_countwords.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epuclla <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/19 10:16:45 by epuclla           #+#    #+#             */
-/*   Updated: 2020/03/10 22:31:47 by epuclla          ###   ########.fr       */
+/*   Created: 2020/03/11 00:36:27 by epuclla           #+#    #+#             */
+/*   Updated: 2020/03/11 00:52:23 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+int		ft_countwords(char const *str, char c)
 {
-	size_t i;
+	size_t	count;
+	int		i;
 
 	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
+	count = 0;
+	while (*str)
+	{
+		if (!i && *str != c)
+			count++;
+		i = (*str == c) ? 0 : 1;
+		str++;
+	}
+	return (count);
 }

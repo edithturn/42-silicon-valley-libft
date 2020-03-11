@@ -1,23 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epuclla <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/19 10:16:45 by epuclla           #+#    #+#             */
-/*   Updated: 2020/03/10 22:31:47 by epuclla          ###   ########.fr       */
+/*   Created: 2020/03/10 23:45:52 by epuclla           #+#    #+#             */
+/*   Updated: 2020/03/10 23:53:39 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+char * ft_strjoin(char const *s1, char const *s2)
 {
-	size_t i;
 
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
+	char *ptr;
+
+	if (!s1 || !s2)
+		return NULL;
+	ptr = ft_strnew(ft_strlen(s1) + ft_str_len(s2) - 1);
+	if (ptr == NULL)
+		return NULL;
+
+	ft_strcpy(ptr, s1)
+	ft_strcat(ptr, s2);
+
+	return(ptr);
 }

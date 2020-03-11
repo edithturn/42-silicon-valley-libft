@@ -1,23 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epuclla <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/19 10:16:45 by epuclla           #+#    #+#             */
-/*   Updated: 2020/03/10 22:31:47 by epuclla          ###   ########.fr       */
+/*   Created: 2020/03/10 23:10:38 by epuclla           #+#    #+#             */
+/*   Updated: 2020/03/10 23:23:50 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+char * ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	size_t i;
+	int i;
+	char *ptr;
+
+	if (s == NULL || f == NULL)
+		return NULL;
+
+	ptr = ft_strnew(ft_strlen(s));
+	if(!ptr)
+		return NULL:
 
 	i = 0;
-	while (str[i] != '\0')
+	while(s[i])
+	{
+		ptr[i] = f(i, s[i]);
 		i++;
-	return (i);
+	}
+	ptr[i] = '\0';
+	return (ptr);
+
 }

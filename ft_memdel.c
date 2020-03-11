@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epuclla <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/19 10:16:45 by epuclla           #+#    #+#             */
-/*   Updated: 2020/03/10 22:31:47 by epuclla          ###   ########.fr       */
+/*   Created: 2020/03/10 22:14:29 by epuclla           #+#    #+#             */
+/*   Updated: 2020/03/10 22:14:34 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+void ft_memdel(void **ap)
 {
-	size_t i;
+    int i;
 
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
+    i = 0;
+    if(ap[i] != '\0')
+        free(ap);
+        ap[i] = NULL;
 }

@@ -1,23 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epuclla <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/19 10:16:45 by epuclla           #+#    #+#             */
-/*   Updated: 2020/03/10 22:31:47 by epuclla          ###   ########.fr       */
+/*   Created: 2020/03/10 22:41:24 by epuclla           #+#    #+#             */
+/*   Updated: 2020/03/10 22:46:06 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-size_t	ft_strlen(const char *str)
+void ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	size_t i;
+	int i;
+	unsigned index;
 
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
+	index = 0;
+	if(s != NULL && f != NULL)
+	{
+		i = 0;
+		while(s[i])
+		{
+			f(index, s[i]);
+			i++;
+		}
+	}
 }
