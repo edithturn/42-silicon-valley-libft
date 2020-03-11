@@ -14,19 +14,10 @@
 
 int main()
 {
-	char *s1 = "MZIRIBMZIRIBMZP";
-	char *s2 = "MZIRIBMZP";
-	char *i1 = strstr(s1, s2);
-	char *i2 = ft_strstr(s1, s2);
-	
-	/*Works
-	printf("%s\n", ft_strstr("asdf qwerty", "wer"));
-	printf("%s\n", ft_strstr("asdf qwerty qwerty", "wer"));
-	printf("%s\n", ft_strstr("asdf qwerty", "qwerty1"));
-	printf("%s\n", ft_strstr("", "wer"));
-	printf("%s\n", ft_strstr("asdf qwerty", "zxcv"));
-	printf("%s\n", ft_strstr("asdf qwerty", ""));
-	*/
+    char *s1 = "HELLO";
+    char *s2 = "LLO";
+    char *i1 = strnstr(s1, s2, 2);
+    char *i2 = ft_strnstr(s1, s2, 2);
+    return (0);
 
-	return 0;
 }

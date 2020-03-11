@@ -12,19 +12,21 @@
 
 #include "../libft.h"
 
-int main()
+int main(void)
 {
-	const char *b;
-	const char *l;
-	size_t	n  = 3;
-	char *p;
+	/*char  buf[20];*/
+	/*char	buf[] = "hola";*/
+	/*char a[4];*/
 
-	b = "Hola";
-	l = "o";
-	p = ft_strnstr(b, l, n);
+	/*ft_strnstr(buf, "deux", 5) == NULL*/
 
-	printf("%s", p);
+	const char *largestring = "Foo";
+	const char *smallstring = "Bar";
 
+	char *r = ft_strnstr(largestring, smallstring, 2);
+	char *c = strnstr(largestring, smallstring, 2);
+	printf("%s", r);
+	printf("%c", '\n');
+	printf("%s", c);
 	return (0);
-
 }
