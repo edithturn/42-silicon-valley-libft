@@ -24,9 +24,8 @@ char	*ft_strdup(const char *src)
 		i++;
 	dest = (char*)malloc(sizeof(*src) * (i + 1));
 	if (dest == NULL)
-	{
 		return (NULL);
-	}
+		
 	while (src[j] != '\0')
 	{
 		dest[j] = src[j];

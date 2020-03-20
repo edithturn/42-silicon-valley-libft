@@ -38,7 +38,7 @@ char *ft_strchr(const char *s, int c);
 char *ft_strrchr(const char *s, int c);
 char *ft_strstr(const char *haystack, const char *needle);
 char *ft_strnstr(const char *big, const char *little, size_t length);
-int	ft_strcmp(char *s1, char *s2);
+int	ft_strcmp(const char *s1, const char *s2);
 int ft_strncmp(const char *s1, const char *s2, size_t n);
 int	ft_atoi(const char *str);
 int ft_isalpha(int c);
@@ -65,6 +65,8 @@ void ft_putendl(char const *s);
 void ft_putendl_fd(char const *s, int fd);
 
 char *ft_strjoin(char const *s1, char const *s2);
+int ft_strequ(char const *s1, char const *s2);
+int ft_strnequ(char const *s1, char const *s2, size_t n);
 
 
 
