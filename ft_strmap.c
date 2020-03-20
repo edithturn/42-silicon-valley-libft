@@ -10,19 +10,19 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-char * ft_strmap(char const *s, char (*f)(char))
+#include "libft.h"
+
+char *ft_strmap(char const *s, char (*f)(char))
 {
 
 	int i;
 	char *ptr;
 	
-	if (s == NULL || f == NULL)
-		return NULL;
-
+	if (s == '\0')
+		return (NULL);
 	ptr = ft_strnew(ft_strlen(s));
 	if(!ptr)
-		return NULL:
-
+		return (NULL);
 	i = 0;
 	while(s[i])
 	{	
@@ -31,6 +31,5 @@ char * ft_strmap(char const *s, char (*f)(char))
 	}
 	ptr[i] = '\0';
 	return (ptr);
-
 }
 
