@@ -33,7 +33,7 @@ char *ft_strcpy(char *dest, const char *src);
 char *ft_strncpy(char * dst, const char * src, size_t len);
 char *ft_strcat(char *str1, const char *str2);
 char *ft_strncat(char *str1, const char *str2, size_t n);
-size_t	ft_strlcat(char *dst, const char *src, size_t size);
+size_t	ft_strlcat(char *dest, const char *src, size_t n);
 char *ft_strchr(const char *s, int c);
 char *ft_strrchr(const char *s, int c);
 char *ft_strstr(const char *haystack, const char *needle);
@@ -63,6 +63,9 @@ void ft_putnbr(int nbr);
 void ft_putnbr_fd(int nbr, int fd);
 void ft_putendl(char const *s);
 void ft_putendl_fd(char const *s, int fd);
+
+char *ft_strjoin(char const *s1, char const *s2);
+
 
 
 
