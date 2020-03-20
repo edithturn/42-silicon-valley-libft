@@ -53,5 +53,6 @@ char *ft_strnew(size_t size);
 void *ft_memalloc(size_t size);
 char *ft_strsub(char const *s, unsigned int start, size_t len);
 char  **ft_strsplit(char const *s, char c);
+char *ft_strtrim(char const *s);
 
 #endif
