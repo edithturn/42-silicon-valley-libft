@@ -61,6 +61,9 @@ void ft_putstr(char const *c);
 void ft_putstr_fd(char const *s, int fd);
 void ft_putnbr(int nbr);
 void ft_putnbr_fd(int nbr, int fd);
+void ft_putendl(char const *s);
+void ft_putendl_fd(char const *s, int fd);
+
 
 
 #endif
