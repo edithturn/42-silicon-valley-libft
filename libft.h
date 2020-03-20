@@ -52,7 +52,13 @@ int ft_tolower(int c);
 char *ft_strnew(size_t size);
 void *ft_memalloc(size_t size);
 char *ft_strsub(char const *s, unsigned int start, size_t len);
-char  **ft_strsplit(char const *s, char c);
+char **ft_strsplit(char const *s, char c);
 char *ft_strtrim(char const *s);
+
+void ft_putchar(char c);
+void ft_putchar_fd(char c, int fd);
+void ft_putstr(char const *c);
+void ft_putstr_fd(char const *s, int fd);
+
 
 #endif
