@@ -59,6 +59,8 @@ void ft_putchar(char c);
 void ft_putchar_fd(char c, int fd);
 void ft_putstr(char const *c);
 void ft_putstr_fd(char const *s, int fd);
+void ft_putnbr(int nbr);
+void ft_putnbr_fd(int nbr, int fd);
 
 
 #endif

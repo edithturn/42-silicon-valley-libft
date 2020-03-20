@@ -12,18 +12,18 @@
 
 #include "libft.h"
 
-void			ft_putnbr_fd(int nbr, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
-	unsigned int nb;
+	unsigned int num;
 
-	if (nbr < 0)
+	if (n < 0)
 	{
-		nb = (unsigned int)-nbr;
+		num = (unsigned int)-n;
 		ft_putchar_fd('-', fd);
 	}
 	else
-		nb = (unsigned int)nbr;
-	if (nb >= 10)
-		ft_putnbr_fd(nb / 10, fd);
-	ft_putchar_fd(nb % 10 + '0', fd);
+		num = (unsigned int)n;
+	if (num >= 10)
+		ft_putnbr_fd(num / 10, fd);
+	ft_putchar_fd(num % 10 + '0', fd);
 }
