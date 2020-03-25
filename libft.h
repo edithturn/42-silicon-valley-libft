@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_LIBFT_H
-# define FT_LIBFT_H
+#ifndef LIBFT_H
+# define LIBFT_H
 
 #include <unistd.h>
 #include <stdlib.h>
@@ -71,7 +71,5 @@ int ft_strnequ(char const *s1, char const *s2, size_t n);
 char *ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char *ft_strmap(char const *s, char (*f)(char));
 void ft_striteri(char *s, void (*f)(unsigned int, char *));
-
-
 
 #endif

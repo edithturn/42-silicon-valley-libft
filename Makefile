@@ -10,10 +10,9 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libft.a
-CFLAGS = -Wall -Wextra -Werror
+TARGET = libft.a
 
-SOURCES = ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c \
+SRC = ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c \
 		  ft_memchr.c ft_memcmp.c ft_strlen.c ft_strdup.c ft_strcpy.c \
 		  ft_strncpy.c ft_strcat.c ft_strncat.c ft_strlcat.c ft_strchr.c \
 		  ft_strrchr.c ft_strstr.c ft_strnstr.c ft_strcmp.c ft_strncmp.c \
@@ -25,20 +24,20 @@ SOURCES = ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c \
 		  ft_strtrim.c ft_strsplit.c ft_itoa.c ft_putchar.c ft_putstr.c \
 		  ft_putendl.c ft_putnbr.c ft_putchar_fd.c ft_putstr_fd.c  ft_putendl_fd.c ft_putnbr_fd.c
 
-OBJECTS = $(SOURCES:.c=.o)
+OBJ = $(SRC:.c=.o)
 
-all: $(NAME)
+all: $(TARGET) $(so)
 
-$(NAME):
-	gcc $(FLAGS) -c libft.h $(SOURCES)
-	ar rcs $(NAME) $(OBJECTS)
+$(TARGET): $(SRC)
+	gcc -Wall -Werror -Wextra -c libft.h $(SRC)
+	ar rcs $(TARGET) $(OBJ)
 	
+so:
+	gcc -fPIC -Wall -Werror -Wextra -c libft.h $(SRC)
+	gcc -shared  -o libft.so $(OBJ)
+
 clean:
-	/bin/rm -f $(OBJECTS)
-
+	/bin/rm -f $(OBJ)
 fclean: clean
-	/bin/rm -f $(NAME)
-
+	/bin/rm -f $(TARGET) libft.so libft.h.gch
 re: fclean all
-
-.PHONY: all clean fclean re

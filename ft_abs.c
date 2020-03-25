@@ -14,8 +14,11 @@
 
 unsigned int	ft_abs(int num)
 {
-	unsigned int num;
+	unsigned int nu;
 
-	num = (num < 0) ? (unsigned int)-num : num;
-	return (num);
+	if (num < 0)
+		nu = (unsigned int)-num;
+	else
+		nu = num;
+	return (nu);
 }
