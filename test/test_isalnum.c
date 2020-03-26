@@ -11,14 +11,21 @@
 /* ************************************************************************** */
 
 #include "../libft.h"
+#include <stdio.h>
+#include <ctype.h>
 
 int main()
 {
-	char c = '-';
+	int j = 122;
 	int n;
+	int b;
 
-	n = ft_isalnum(c);
-	printf("%d", n);
+	n = ft_isalnum(j);
+	b = isalnum(j);
+
+	printf("%d %d", j, n);
+	printf("%c", '\n');
+	printf("%d %d", j, b);
 	
 	return (0);
 }
