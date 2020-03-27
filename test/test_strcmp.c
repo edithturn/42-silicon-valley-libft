@@ -13,7 +13,10 @@
 #include "../libft.h"
 
 int main()
-{	
-	printf("%d", ft_strcmp("abc", "abd"));
+{
+	printf("%d", ft_strcmp("\0", "\200"));
+	printf("%c", '\n');
+	printf("%d", strcmp("\0", "\200"));
+
 	return (0);
 }
