@@ -36,7 +36,7 @@ char *ft_strncat(char *str1, const char *str2, size_t n);
 size_t	ft_strlcat(char *dest, const char *src, size_t n);
 char *ft_strchr(const char *s, int c);
 char *ft_strrchr(const char *s, int c);
-char *ft_strstr(const char *haystack, const char *needle);
+char *ft_strstr(const char *str, const char *to_find);
 char *ft_strnstr(const char *big, const char *little, size_t length);
 int	ft_strcmp(const char *s1, const char *s2);
 int ft_strncmp(const char *s1, const char *s2, size_t n);

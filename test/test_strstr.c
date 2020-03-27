@@ -14,10 +14,16 @@
 
 int main()
 {
-    char *s1 = "HELLO";
-    char *s2 = "LLO";
-    char *i1 = strnstr(s1, s2, 2);
-    char *i2 = ft_strnstr(s1, s2, 2);
-    return (0);
+   /*char *s1 = "HELLO";*/
+    /*char *s2 = "LLO";*/
 
+    char *s2 = "";
+	char *s1 = "";
+
+    const char *i1 = strstr(s1, s2);
+    const char *i2 = ft_strstr(s1, s2);
+    printf("%s", i1);
+    printf("%c", '\n');
+    printf("%s", i2);
+    return (0);
 }

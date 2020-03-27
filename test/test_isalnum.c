@@ -16,16 +16,17 @@
 
 int main()
 {
-	int j = 122;
+	/*int j = 122;*/
+	char c = 'u';
 	int n;
 	int b;
 
-	n = ft_isalnum(j);
-	b = isalnum(j);
+	n = ft_isalnum(c);
+	b = isalnum(c);
 
-	printf("%d %d", j, n);
+	printf("%s  %c %d", "ft_isalnum", c, n);
 	printf("%c", '\n');
-	printf("%d %d", j, b);
+	printf("%s %c %d\n", "isalnum", c, b);
 	
 	return (0);
 }

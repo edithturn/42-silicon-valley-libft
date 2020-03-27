@@ -17,20 +17,22 @@ char	*ft_strstr(const char *str, const char *to_find)
 	unsigned int n;
 	unsigned int i;
 
-	if (to_find != '\0')
-		return ((char*)str);
+	if (!*to_find)
+		return ((char *)str);
 	n = 0;
-	while (str[n] != '\0')
+	while (str[n])
 	{
 		if (str[n] == to_find[0])
 		{
 			i = 1;
-			while (to_find[i] != '\0' && str[n + i] == to_find[i])
+			while (to_find[i] && str[n + i] == to_find[i])
+			{
 				i++;
-			if (to_find[i] == '\0')
-				return ((char*)to_find);
+				if (!to_find[i])
+					return ((char *)&str[n]);
+			}
 		}
-		n++;
+			n++;
 	}
 	return (0);
 }
