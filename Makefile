@@ -10,8 +10,9 @@
 #                                                                              #
 # **************************************************************************** #
 
-TARGET = libft.a
-
+NAME = libft.a
+CFLAGS = -Wall -Wextra -Werror
+OBJECTS = *.o 
 SRC = ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c \
 		  ft_memchr.c ft_memcmp.c ft_strlen.c ft_strdup.c ft_strcpy.c \
 		  ft_strncpy.c ft_strcat.c ft_strncat.c ft_strlcat.c ft_strchr.c \
@@ -23,21 +24,16 @@ SRC = ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c \
 		  ft_strequ.c ft_strnequ.c ft_strsub.c ft_strjoin.c \
 		  ft_strtrim.c ft_strsplit.c ft_itoa.c ft_putchar.c ft_putstr.c \
 		  ft_putendl.c ft_putnbr.c ft_putchar_fd.c ft_putstr_fd.c  ft_putendl_fd.c ft_putnbr_fd.c
-
-OBJ = $(SRC:.c=.o)
-
-all: $(TARGET) $(so)
-
-$(TARGET): $(SRC)
-	gcc -Wall -Werror -Wextra -c libft.h $(SRC)
-	ar rcs $(TARGET) $(OBJ)
-	
-so:
-	gcc -fPIC -Wall -Werror -Wextra -c libft.h $(SRC)
-	gcc -shared  -o libft.so $(OBJ)
-
+INCLUDES = libft.h
+INCLUDES = libft.h
+all: $(NAME)
+$(NAME):
+	gcc $(FLAGS) -I $(INCLUDES) -c $(SOURCES)
+	ar rc $(NAME) *.o
 clean:
-	/bin/rm -f $(OBJ)
-fclean: clean
-	/bin/rm -f $(TARGET) libft.so libft.h.gch
+	/bin/rm -f $(OBJECTS)
+fclean:
+	/bin/rm -f $(NAME)
+	/bin/rm -f $(OBJECTS)
 re: fclean all
+.PHONY: all clean fclean re
