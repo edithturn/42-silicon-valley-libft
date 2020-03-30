@@ -12,15 +12,16 @@
 
 #include "libft.h"
 
-void ft_striter(char *s, void (*f)(char *))
+void ft_striter(char *s, void (*f)(char ))
 {
-	if(s != NULL && f != NULL)
-	{
+	int i;
 
-		while(s)
-		{
-			f(s);
-			s++;
-		}
+	i = 0;
+	if(!s || !f)
+		return ;
+	while(s[i] != '\0')
+	{
+		f(s[i]);
+		i++;
 	}
 }
