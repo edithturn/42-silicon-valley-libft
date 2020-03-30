@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-void ft_striter(char *s, void (*f)(char ))
+void ft_striter(char *s, void (*f)(char *))
 {
 	int i;
 
@@ -21,7 +21,7 @@ void ft_striter(char *s, void (*f)(char ))
 		return ;
 	while(s[i] != '\0')
 	{
-		f(s[i]);
+		f(&s[i]);
 		i++;
 	}
 }
