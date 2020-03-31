@@ -1,15 +1,16 @@
 
 #include "../libft.h"
 
-void *test_striter_f(char *s)
+void test_striter_f(char *s)
 {
-	printf("%s", s);
-	return (NULL);
+	/*printf("%s", s);*/
+	write(1, s, 1);
 }
 
 int main(void)
 {
 	char *c = "asdf";
-	ft_striter(c, test_striter_f(c));
+	void (*f)(char *) = &test_striter_f;
+	ft_striter(c, f);
 	return (0);
 }
