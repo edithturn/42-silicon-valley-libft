@@ -19,10 +19,10 @@ void ft_striteri(char *s, void (*f)(unsigned int, char *))
 	index = 0;
 	if(s != NULL && f != NULL)
 	{
-		while(s)
+		while(s[index])
 		{
-			f(index, s);
-			s++;
+			f(index, &(s[index]));
+			index++;
 		}
 	}
 }
