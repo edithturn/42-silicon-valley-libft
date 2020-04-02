@@ -18,6 +18,11 @@ char *ft_itoa(int n)
 	size_t				lenght;
 	unsigned int	num;
 
+	if (n == 0)
+	{
+		ptr = "0";
+		return (ptr);
+	}
 	if (n < 0)
 	{
 		num = -n;
@@ -28,6 +33,7 @@ char *ft_itoa(int n)
 		num = n;
 		lenght = 0;
 	}
+
 	while (num > 0)
 	{
 		num = num / 10;
@@ -47,5 +53,6 @@ char *ft_itoa(int n)
 	}
 	if (n < 0)
 		ptr[0] = '-';
+	 
 	return (ptr);
 }
