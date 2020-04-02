@@ -20,6 +20,8 @@ char *ft_itoa(int n)
 
 	if (n == 0)
 	{
+		if (!(ptr = ft_strnew(1)))
+			return (NULL);
 		ptr = "0";
 		return (ptr);
 	}
