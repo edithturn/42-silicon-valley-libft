@@ -2,7 +2,7 @@
 
 int main (void)
 {
-	int a = 0;
+	int a = 74;
 	char *r;
 	r = ft_itoa(a);
 	printf("%s", r);
