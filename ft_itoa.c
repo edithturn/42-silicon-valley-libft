@@ -18,13 +18,13 @@ char	*ft_itoa(int n)
 	char	*ptr;
 	size_t				lenght;
 
-	/*if (n == 0)
+	if (n == 0)
 	{
 		if (!(ptr = ft_strnew(1)))
 			return (NULL);
 		ptr = "0";
 		return (ptr);
-	}*/
+	}
 	num = (n < 0) ? -n : n;
 	lenght = (n < 0) ? 1 : 0;
 	while (num > 0)
