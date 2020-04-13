@@ -14,9 +14,9 @@
 
 char	*ft_itoa(int n)
 {
-	unsigned	int	num;
-	char	*ptr;
+	char				*ptr; 
 	size_t				lenght;
+	unsigned int	num;
 
 	if (n == 0)
 	{
@@ -25,8 +25,17 @@ char	*ft_itoa(int n)
 		ptr = "0";
 		return (ptr);
 	}
-	num = (n < 0) ? -n : n;
-	lenght = (n < 0) ? 1 : 0;
+	if (n < 0)
+	{
+		num = -n;
+		lenght = 1;
+	}
+	else
+	{
+		num = n;
+		lenght = 0;
+	}
+
 	while (num > 0)
 	{
 		num = num / 10;
@@ -34,12 +43,18 @@ char	*ft_itoa(int n)
 	}
 	if (!(ptr = ft_strnew(lenght)))
 		return (NULL);
-	num = (n < 0) ? -n : n;
-	while (num > 0)
+	if (n < 0)
+		num = -n;
+	else
+		num = n;
+	while(num > 0)
 	{
-		ptr[lenght--] = (num % 10) + '0';
+		lenght = lenght - 1;
+		ptr[lenght] = (num % 10) + '0';
 		num = num / 10;
 	}
-	ptr[0] = (n < 0) ? '-' : ' ';
+	if (n < 0)
+		ptr[0] = '-';
+	 
 	return (ptr);
 }
