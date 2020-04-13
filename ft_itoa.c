@@ -40,6 +40,6 @@ char	*ft_itoa(int n)
 		ptr[lenght--] = (num % 10) + '0';
 		num = num / 10;
 	}
-	ptr[0] = (n < 0) ? '-': ' ';	
+	ptr[0] = (n < 0) ? '-' : ' ';
 	return (ptr);
 }
