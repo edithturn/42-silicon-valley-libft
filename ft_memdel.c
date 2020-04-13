@@ -13,8 +13,8 @@
 #include "libft.h"
 #include <stdlib.h>
 
-void ft_memdel(void **ap)
+void	ft_memdel(void **ap)
 {
-    free(*ap);
-    *ap = 0;
+	free(*ap);
+	*ap = 0;
 }

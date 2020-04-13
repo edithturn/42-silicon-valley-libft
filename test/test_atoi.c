@@ -14,7 +14,7 @@
 
 int main()
 {
-	char *s = "214748364999";
+	char *s = "1875";
 	int n;
 	int p;
 
