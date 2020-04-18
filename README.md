@@ -20,6 +20,7 @@ This project Contains basic C functions for use in future projects
 
 ## Functions  uses malloc
 
+|||
 | ------------- | ------------- |
 | calloc  | strdup  |
 
@@ -33,6 +34,8 @@ This project Contains basic C functions for use in future projects
 | ft_itoa  | ft_putnbr_fd  |
 
 ## Linklist functions | Bonus Part
+
+|||
 | ------------- | ------------- |
 | ft_lstnew  | ft_lstadd_back  |
 | ft_lstadd_front  | ft_lstdelone  |
