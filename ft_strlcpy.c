@@ -6,13 +6,13 @@
 /*   By: edith <edith@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 10:06:43 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/18 16:11:45 by edith            ###   ########.fr       */
+/*   Updated: 2020/04/18 16:20:30 by edith            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	strlcpy(char *dst, const char *src, size_t size)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 
 	if(!dst && !src)

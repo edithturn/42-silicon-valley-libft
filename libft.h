@@ -6,7 +6,7 @@
 /*   By: edith <edith@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 09:57:51 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/17 23:09:17 by edith            ###   ########.fr       */
+/*   Updated: 2020/04/18 16:49:49 by edith            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 /*
 **  Libc functions  | First Part
 */
+
 void		*ft_memset(void *b, int c, size_t len);
 void			ft_bzero(void *s, size_t n);
 void		*ft_memcpy(void *dst, const void *src, size_t n);
