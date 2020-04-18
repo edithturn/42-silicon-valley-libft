@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsplit.c                                      :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: epuclla <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: edith <edith@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/11 00:33:04 by epuclla           #+#    #+#             */
-/*   Updated: 2020/03/11 00:55:53 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/04/16 22:41:17 by edith            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ static size_t ft_countwords(char const *str, char c)
 	}
 	return (count);
 }
-char  **ft_strsplit(char const *s, char c)
+char  **ft_split(char const *s, char c)
 {
 	char	**ptr;
 	size_t	i;

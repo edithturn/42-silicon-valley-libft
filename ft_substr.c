@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsub.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: epuclla <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: edith <edith@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/10 23:34:03 by epuclla           #+#    #+#             */
-/*   Updated: 2020/03/10 23:41:44 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/04/16 22:25:22 by edith            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strsub(char const *s, unsigned int start, size_t len)
+char *ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t i;
 	char *ptr;

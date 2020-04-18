@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: edith <edith@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/04/17 23:08:46 by edith             #+#    #+#             */
-/*   Updated: 2020/04/17 23:08:52 by edith            ###   ########.fr       */
+/*   Created: 2020/04/17 10:29:09 by edith             #+#    #+#             */
+/*   Updated: 2020/04/17 10:37:19 by edith            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+Returns the last element of the list.
+Parameters: #1. The beginning of the list.
+*/
 #include "libft.h"
 
-char	*ft_strcpy(char *dest, const char *src)
+t_list			*ft_lstlast(t_list *lst)
 {
-	size_t i;
+	t_list *next;
 
-	i = 0;
-	while (src[i])
+	while(lst)
 	{
-		dest[i] = src[i];
-		i++;
+		next = lst->next;
+		lst = next;
 	}
-	dest[i] = '\0';
-	return (dest);
+	return (lst);
 }
