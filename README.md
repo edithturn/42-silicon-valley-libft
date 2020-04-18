@@ -1,6 +1,14 @@
 # C Library
-C programming can be very tedious when one doesn’t have access to those highly useful standard functions.
-This project Contains basic C functions for use in future projects
+**C programming** can be very tedious when one doesn’t have access to those highly useful standard functions.
+This project Contains **basic C** functions for use in future projects.
+
+To use this library:
+
+```c
+cd 42-silicon-valley-libft
+make all
+```
+This will be generate the static library called: **libft.a**
 
 ## Libc functions  | First Part
 
@@ -26,6 +34,7 @@ This project Contains basic C functions for use in future projects
 
 ## Additional functions | Second Part
 
+|||
 | ------------- | ------------- |
 | ft_substr  | ft_strmapi  |
 | ft_strjoin  | ft_putchar_fd  |
