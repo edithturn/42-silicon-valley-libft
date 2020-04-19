@@ -6,7 +6,7 @@
 /*   By: edith <edith@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 09:57:51 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/18 16:49:49 by edith            ###   ########.fr       */
+/*   Updated: 2020/04/19 15:02:44 by edith            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void		*ft_memmove(void*dst, const void *src, size_t len);
 void		*ft_memchr(const void *str, int c, size_t n);
 int				ft_memcmp(const void *s1, const void *s2, size_t n);
 size_t		ft_strlen(const char *str);
-size_t		strlcpy(char *dst, const char *src, size_t size);
+size_t		ft_strlcpy(char *dst, const char *src, size_t size);
 char		*ft_strcat(char *str1, const char *str2);
 char		*ft_strchr(const char *s, int c);
 char		*ft_strrchr(const char *s, int c);
