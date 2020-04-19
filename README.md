@@ -12,7 +12,6 @@ This will be generate the static library called: **libft.a**
 
 ## Libc functions  | First Part
 
-<center>
 |||
 | ------------- | ------------- |
 | memset  | strrchr  |
@@ -26,8 +25,6 @@ This will be generate the static library called: **libft.a**
 | strlcpy  | isprint  |
 | strlcat  | toupper  |
 | strchr  | tolower  |
-
-</center>
 
 
 ## Functions  uses malloc
