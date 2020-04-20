@@ -6,7 +6,7 @@
 /*   By: edith <edith@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 10:06:43 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/19 17:58:12 by edith            ###   ########.fr       */
+/*   Updated: 2020/04/19 18:04:54 by edith            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,10 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 		return (0);
 	if (size == 0)
 		return (ft_strlen(src));
-	size_tmp = ft_strlen(src);
-	if(size_tmp < size)
+	if(ft_strlen(src) < size)
 		ft_strcpy(dst, src);
 	else
 		ft_strncpy(dst, src, size - 1);	
 	dst[size - 1] = '\0';
-	return (size_tmp);
+	return (ft_strlen(src));
 }
