@@ -6,7 +6,7 @@
 /*   By: edith <edith@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 09:57:51 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/19 15:02:44 by edith            ###   ########.fr       */
+/*   Updated: 2020/04/20 11:28:04 by edith            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,14 +56,19 @@ char		*ft_strdup(const char *src);
 */
 char		*ft_substr(char const *s, unsigned int start, size_t len);
 char		*ft_strjoin(char const *s1, char const *s2);
-char		*ft_strtrim(char const *s);
+char 		*ft_strtrim(char const *s1, char const *set);
 char		**ft_split(char const *s, char c);
 char		*ft_itoa(int n);
 char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void		ft_putchar_fd(char c, int fd);
+
 void		ft_putstr_fd(char const *s, int fd);
+/*void 		ft_putstr_fd(char *s, int fd);*/
+
 void		ft_putendl_fd(char const *s, int fd);
-void		ft_putnbr_fd(int nbr, int fd);
+/*void 		ft_putendl_fd(char *s, int fd);*/
+
+void 		ft_putnbr_fd(int n, int fd);
 
 
 /*
@@ -111,5 +116,7 @@ int ft_strnequ(char const *s1, char const *s2, size_t n);
 char *ft_strmap(char const *s, char (*f)(char));
 void ft_striter(char *s, void (*f)(char *));
 void ft_striteri(char *s, void (*f)(unsigned int, char *));
+char *ft_strsub(char const *s, unsigned int start, size_t len);
+
 
 #endif

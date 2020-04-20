@@ -6,33 +6,42 @@
 /*   By: edith <edith@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/10 23:54:12 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/19 19:53:23 by edith            ###   ########.fr       */
+/*   Updated: 2020/04/20 12:08:05 by edith            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_space(char  const *s)
+/*
+Allocates (with malloc(3)) and returns a copy of
+’s1’ with the characters specified in ’set’ removed
+from the beginning and the end of the string.
+Parameters:
+#1. The string to be trimmed.
+#2. The reference set of characters to trim.
+*/
+
+int ft_space(char  const *s, char const *set)
 {
-	return (*s == '\n'  || *s == ' ' || *s == '\t');
+	return (*s == *set);
 }
-char *ft_strtrim(char const *s)
+char 	*ft_strtrim(char const *s1, char const *set)
 {
 	char *ptr;
 	int len;
 	int i;
 
-	if(*s == '\0')
+	if(*s1 == '\0')
 		return (NULL);
-	while(*s && ft_space(s))
-		s++;
-	if (ft_strlen(s) == 0)
+	while(*s1 && ft_space(s1, set))
+		s1++;
+	if (ft_strlen(s1) == 0)
 		len = 0;
 	else
-		len =  ft_strlen(s) - 1;	
+		len =  ft_strlen(s1) - 1;
 	if(len > 0)
 	{
-		while(s[len] == '\n' || s[len] == ' '  || s[len] == '\t')
+		while(s1[len] == *set || s1[len] == *set  || s1[len] == *set)
 			len--;
 		len++;
 	}
@@ -42,9 +51,9 @@ char *ft_strtrim(char const *s)
 	ptr[len] = '\0';
 	while(len)
 	{
-		ptr[i] = *s;
+		ptr[i] = *s1;
 		i++;
-		s++;
+		s1++;
 		len--;
 	}	
 	return (ptr);		
