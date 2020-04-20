@@ -6,7 +6,7 @@
 /*   By: edith <edith@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 10:06:43 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/19 18:04:54 by edith            ###   ########.fr       */
+/*   Updated: 2020/04/19 18:15:50 by edith            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	size_t size_tmp;
-
 	if(!dst && !src)
 		return (0);
 	if (size == 0)
