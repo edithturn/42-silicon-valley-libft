@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: epuclla <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: edith <edith@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/10 22:24:23 by epuclla           #+#    #+#             */
-/*   Updated: 2020/03/10 22:29:02 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/04/20 17:29:34 by edith            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_strdel(char **as)
+void	ft_strdel(char **as)
 {
 	free(*as);
 	*as = 0;

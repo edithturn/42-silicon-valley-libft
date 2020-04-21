@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strclr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: epuclla <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: edith <edith@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/10 22:30:02 by epuclla           #+#    #+#             */
-/*   Updated: 2020/03/10 22:34:20 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/04/20 17:29:23 by edith            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_strclr(char *s)
+void	ft_strclr(char *s)
 {
 	int i;
 
