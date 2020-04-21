@@ -6,7 +6,7 @@
 /*   By: edith <edith@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/10 23:54:12 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/20 13:51:34 by edith            ###   ########.fr       */
+/*   Updated: 2020/04/21 14:11:30 by edith            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ Parameters:
 
 int ft_space(char  const *s, char const *set)
 {
-	return (*s == *set);
+	return (*s == *set );
 }
 char 	*ft_strtrim(char const *s1, char const *set)
 {
@@ -31,7 +31,7 @@ char 	*ft_strtrim(char const *s1, char const *set)
 	int len;
 	int i;
 
-	if(*s1 == '\0')
+	if(*s1 == '\0' && *set == '\0')
 		return (NULL);
 	while(*s1 && ft_space(s1, set))
 		s1++;
