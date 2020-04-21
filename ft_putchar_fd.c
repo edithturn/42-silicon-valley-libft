@@ -6,14 +6,14 @@
 /*   By: edith <edith@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/11 01:06:30 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/21 15:11:43 by edith            ###   ########.fr       */
+/*   Updated: 2020/04/21 15:44:17 by edith            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include "libft.h"
 
-void		ft_putendl_fd(char const *s, int fd)
+void		ft_putstr_fd(char const *s, int fd)
 {
 	write(fd, &s, 1);
 }
