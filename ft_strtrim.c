@@ -6,7 +6,7 @@
 /*   By: edith <edith@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/10 23:54:12 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/21 16:35:56 by edith            ###   ########.fr       */
+/*   Updated: 2020/04/21 16:44:41 by edith            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ char 	*ft_strtrim(char const *s1, char const *set)
 		len =  ft_strlen(s1) - 1;
 	if(len > 0)
 	{
-		while(s1[len] == *set || s1[len] == *set  || s1[len] == *set)
+		while(s1[len] == *set)
 			len--;
 		len++;
 	}

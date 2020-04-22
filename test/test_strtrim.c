@@ -6,8 +6,8 @@ int main(void)
     char *a;
     char *ptr;
     
-	c = "jjjjjHolajjjjj";
-    a = "jjjjj";
+	c = " Hola ";
+    a = " ";
     ptr = ft_strtrim(c, a);
     printf("%s", ptr);
 
