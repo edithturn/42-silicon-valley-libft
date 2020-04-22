@@ -6,7 +6,7 @@
 /*   By: edith <edith@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/16 22:55:29 by edith             #+#    #+#             */
-/*   Updated: 2020/04/17 10:37:10 by edith            ###   ########.fr       */
+/*   Updated: 2020/04/21 20:47:58 by edith            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,6 @@ Adds the element ’new’ at the beginning of the list.
 */
 void			ft_lstadd_front(t_list **lst, t_list *new)
 {
-    t_list **heap = lst;
-	t_list *new_node = new;
-
-    if(*heap)
-		new_node->next = *heap;
-		*heap = new_node;	
+		new->next = *lst;
+		*lst = new;
 }
