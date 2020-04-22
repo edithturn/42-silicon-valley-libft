@@ -6,7 +6,7 @@
 /*   By: edith <edith@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/16 22:55:29 by edith             #+#    #+#             */
-/*   Updated: 2020/04/21 20:47:58 by edith            ###   ########.fr       */
+/*   Updated: 2020/04/21 21:41:12 by edith            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ Adds the element ’new’ at the beginning of the list.
 */
 void			ft_lstadd_front(t_list **lst, t_list *new)
 {
+	if(*lst != NULL)
 		new->next = *lst;
-		*lst = new;
+	*lst = new;
 }

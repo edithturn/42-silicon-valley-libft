@@ -6,7 +6,7 @@
 /*   By: edith <edith@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/16 22:53:26 by edith             #+#    #+#             */
-/*   Updated: 2020/04/19 20:02:54 by edith            ###   ########.fr       */
+/*   Updated: 2020/04/21 22:35:12 by edith            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,4 +30,3 @@ t_list	*ft_lstnew(void *content)
 	my_list->next = NULL;
     return (my_list);
 }
-
