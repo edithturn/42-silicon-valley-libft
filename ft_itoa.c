@@ -6,13 +6,13 @@
 /*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/22 20:13:31 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/23 14:55:46 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/04/23 14:58:44 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		*is_number_zero(int n)
+char		*is_number_zero(int n)
 {
 	char				*ptr;
 
