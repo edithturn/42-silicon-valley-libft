@@ -6,7 +6,7 @@
 /*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/10 23:54:12 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/23 02:19:29 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/04/23 15:19:46 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 ** #2. The reference set of characters to trim.
 */
 
-int	ft_space(char const *s, char const *set)
+int		t_space(char const *s, char const *set)
 {
 	return (*s == *set);
 }
