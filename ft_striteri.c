@@ -6,20 +6,20 @@
 /*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/22 21:28:58 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/22 21:28:59 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/04/23 01:12:02 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_striteri(char *s, void (*f)(unsigned int, char *))
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	unsigned index;
 
 	index = 0;
-	if(s != NULL && f != NULL)
+	if (s != NULL && f != NULL)
 	{
-		while(s[index])
+		while (s[index])
 		{
 			f(index, &(s[index]));
 			index++;

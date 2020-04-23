@@ -6,7 +6,7 @@
 /*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/22 21:26:18 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/22 21:26:20 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/04/23 01:05:34 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_strclr(char *s)
 	int i;
 
 	i = 0;
-	if(s[i] != '\0')
+	if (s[i] != '\0')
 	{
 		ft_memset(s, '\0', ft_strlen(s));
 	}

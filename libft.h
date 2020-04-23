@@ -6,17 +6,18 @@
 /*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 09:57:51 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/22 21:31:41 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/04/23 02:14:26 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-#include <unistd.h>
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
+# include <unistd.h>
+# include <stddef.h>
+# include <stdlib.h>
+# include <stdio.h>
+# include <string.h>
 
 /*
 **  Libc functions  | First Part
@@ -52,34 +53,33 @@ void		*ft_calloc(size_t nmemb, size_t size);
 char		*ft_strdup(const char *src);
 
 /*
-**  Additional functions | Second Part
+** Additional functions | Second Part
 */
 char		*ft_substr(char const *s, unsigned int start, size_t len);
 char		*ft_strjoin(char const *s1, char const *s2);
-char 		*ft_strtrim(char const *s1, char const *set);
+char		*ft_strtrim(char const *s1, char const *set);
 char		**ft_split(char const *s, char c);
 char		*ft_itoa(int n);
 char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void		ft_putchar_fd(char c, int fd);
 
 void		ft_putstr_fd(char const *s, int fd);
-/*void 		ft_putstr_fd(char *s, int fd);*/
-
+/*
+** void		ft_putstr_fd(char *s, int fd);
+*/
 void		ft_putendl_fd(char const *s, int fd);
-/*void 		ft_putendl_fd(char *s, int fd);*/
-
-void 		ft_putnbr_fd(int n, int fd);
-
-
+/*
+** void		ft_putendl_fd(char *s, int fd);
+*/
+void		ft_putnbr_fd(int n, int fd);
 /*
 **  Linklist functions | Bonus Part
 */
-
-typedef struct          s_list
+typedef	struct			s_list
 {
-	void                        *content;
-	struct s_list           *next;
-}	t_list;
+	void					*content;
+	struct s_list			*next;
+}						t_list;
 
 t_list			*ft_lstnew(void *content);
 void			ft_lstadd_front(t_list **lst, t_list *new);
@@ -89,33 +89,31 @@ void			ft_lstadd_back(t_list **lst, t_list *new);
 void			ft_lstdelone(t_list *lst, void (*del)(void *));
 void			ft_lstclear(t_list **lst, void (*del)(void *));
 void			ft_lstiter(t_list *lst, void (*f)(void *));
-t_list			*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
-
-
+t_list			*ft_lstmap(t_list *lst, void *(*f)(void *), \
+					void (*del)(void *));
 /*
 **  Extra functions
 */
-void ft_lstdel(t_list **alst, void (*del)(void *, size_t));
-void ft_lstadd(t_list **alst, t_list *new);
+void	ft_lstdel(t_list **alst, void (*del)(void *, size_t));
+void	ft_lstadd(t_list **alst, t_list *new);
 char	*ft_strcpy(char *dest, const char *src);
-char *ft_strncpy(char * dst, const char * src, size_t len);
-char *ft_strncat(char *str1, const char *str2, size_t n);
+char	*ft_strncpy(char *dst, const char *src, size_t len);
+char	*ft_strncat(char *str1, const char *str2, size_t n);
 size_t	ft_strlcat(char *dest, const char *src, size_t n);
-char *ft_strstr(const char *str, const char *to_find);
+char	*ft_strstr(const char *str, const char *to_find);
 int	ft_strcmp(const char *s1, const char *s2);
-char *ft_strnew(size_t size);
-void *ft_memalloc(size_t size);
-void ft_memdel(void **ap);
-void ft_putchar(char c);
-void ft_putstr(char const *c);
-void ft_putnbr(int nbr);
-void ft_putendl(char const *s);
-int ft_strequ(char const *s1, char const *s2);
-int ft_strnequ(char const *s1, char const *s2, size_t n);
-char *ft_strmap(char const *s, char (*f)(char));
-void ft_striter(char *s, void (*f)(char *));
-void ft_striteri(char *s, void (*f)(unsigned int, char *));
-char *ft_strsub(char const *s, unsigned int start, size_t len);
-
+char	*ft_strnew(size_t size);
+void	*ft_memalloc(size_t size);
+void	ft_memdel(void **ap);
+void	ft_putchar(char c);
+void	ft_putstr(char const *c);
+void	ft_putnbr(int nbr);
+void	ft_putendl(char const *s);
+int	ft_strequ(char const *s1, char const *s2);
+int	ft_strnequ(char const *s1, char const *s2, size_t n);
+char	*ft_strmap(char const *s, char (*f)(char));
+void	ft_striter(char *s, void (*f)(char *));
+void	ft_striteri(char *s, void (*f)(unsigned int, char *));
+char	*ft_strsub(char const *s, unsigned int start, size_t len);
 
 #endif

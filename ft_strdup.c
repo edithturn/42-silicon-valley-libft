@@ -6,7 +6,7 @@
 /*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/22 21:28:35 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/22 21:28:36 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/04/23 01:15:20 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ char	*ft_strdup(const char *src)
 	dest = (char*)malloc(sizeof(*src) * (i + 1));
 	if (dest == NULL)
 		return (NULL);
-		
 	while (src[j] != '\0')
 	{
 		dest[j] = src[j];
