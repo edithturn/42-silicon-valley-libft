@@ -6,7 +6,7 @@
 /*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/22 21:25:56 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/23 02:10:40 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/04/23 15:18:28 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static	size_t	ft_countletters(char const *str, char c)
 	return (count);
 }
 
-static	size_t	ft_countwords(char	const *str, char c)
+static	size_t	ft_countwords(char const *str, char c)
 {
 	size_t	count;
 
@@ -39,7 +39,7 @@ static	size_t	ft_countwords(char	const *str, char c)
 	return (count);
 }
 
-char	**ft_split(char const *s, char c)
+char			**ft_split(char const *s, char c)
 {
 	char	**ptr;
 	size_t	i;
