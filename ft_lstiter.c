@@ -6,21 +6,21 @@
 /*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/22 20:15:03 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/22 20:15:05 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/04/22 23:57:51 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-Iterates the list ’lst’ and applies the function ’f’
- to the content of  each element. 
-Parameters:
-#1. The adress of a pointer to an element.
-#2. The adress of the function used to iterate on the list.
+** Iterates the list ’lst’ and applies the function ’f’
+** to the content of  each element.
+** Parameters:
+** #1. The adress of a pointer to an element.
+** #2. The adress of the function used to iterate on the list.
 */
 
-void			ft_lstiter(t_list *lst, void (*f)(void *))
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	t_list *next;
 
