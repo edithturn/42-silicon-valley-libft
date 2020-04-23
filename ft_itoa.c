@@ -6,13 +6,13 @@
 /*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/22 20:13:31 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/23 14:45:24 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/04/23 14:50:14 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*is_number_zero(int n)
+int	is_number_zero(int n)
 {
 	char				*ptr;
 
@@ -21,6 +21,7 @@ char	*is_number_zero(int n)
 		ptr = "0";
 		return (ft_strdup(ptr));
 	}
+	return (n);
 }
 
 char	*ft_itoa(int n)
