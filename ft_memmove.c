@@ -6,7 +6,7 @@
 /*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/22 21:24:39 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/22 21:24:41 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/04/23 00:23:56 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,15 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t n)
 {
-	size_t		i;
-	unsigned char		*usrc;
-	unsigned char		*udst;
+	size_t				i;
+	unsigned	char	*usrc;
+	unsigned	char	*udst;
 
 	i = 0;
 	usrc = (unsigned char *)src;
 	udst = (unsigned char *)dst;
-
 	if (udst == NULL && usrc == NULL)
-        return NULL;
-
+		return (NULL);
 	if (usrc > udst)
 	{
 		while (i < n)
@@ -36,13 +34,8 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 	}
 	else
 	{
-		while ( n > 0)
-		{
-			n--;
+		while (n-- > 0)
 			udst[n] = usrc[n];
-		}
-		return(dst);
-
+		return (dst);
 	}
-
 }
