@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: edith <edith@student.42.fr>                +#+  +:+       +#+        */
+/*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/17 22:30:53 by edith             #+#    #+#             */
-/*   Updated: 2020/04/19 19:16:20 by edith            ###   ########.fr       */
+/*   Updated: 2020/04/22 19:18:22 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,30 +26,24 @@ of an element if needed.
 
 t_list			*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*new_list;
-	t_list	*new_element;
-	t_list	*current;
+	t_list	*next;
+	t_list	*new_node;
 
 	if (!lst || !f)
 		return (NULL);
-
-	current = ft_lstnew(f(lst->content));	
-	if (!(new_element = current))
+	new_node = ft_lstnew(f(lst->content));
+	if (new_node == NULL)
 	{
-		ft_lstclear(&lst, del);
+		del(new_node);
 		return (NULL);
 	}
-	lst = lst->next;
-	while (lst != NULL)
+	while (lst->next != NULL)
 	{
-		if(!(new_element = current))
-		{
-			ft_lstclear(&lst, del);
-			ft_lstclear(&new_element, del);
-			break;
-		}
+		next = new_node;
+		new_node->next = next;
+		new_node = new_node->next;
 		lst = lst->next;
-		ft_lstadd_back(&new_list, new_element);
 	}
-	return (new_list);
+	new_node->next = NULL;
+	return (new_node);
 }
