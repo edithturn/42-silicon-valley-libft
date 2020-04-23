@@ -6,13 +6,13 @@
 /*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/22 20:12:41 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/22 20:12:42 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/04/22 22:18:24 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_calloc(size_t nmemb, size_t size)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
 	return (ft_memalloc(nmemb * size));
 }
