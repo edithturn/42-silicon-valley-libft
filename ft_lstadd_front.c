@@ -6,20 +6,21 @@
 /*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/22 20:14:09 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/22 20:14:11 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/04/22 23:43:04 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/**
-Adds the element ’new’ at the beginning of the list.
-#1. The address of a pointer to the first link of a list.
-#2. The address of a pointer to the element to be added to the list.
+/*
+** Adds the element ’new’ at the beginning of the list.
+** #1. The address of a pointer to the first link of a list.
+** #2. The address of a pointer to the element to be added to the list.
 */
-void			ft_lstadd_front(t_list **lst, t_list *new)
+
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	if(*lst != NULL)
+	if (*lst != NULL)
 		new->next = *lst;
 	*lst = new;
 }
