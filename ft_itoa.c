@@ -6,7 +6,7 @@
 /*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/22 20:13:31 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/23 14:14:26 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/04/23 14:29:58 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,11 @@ char	*ft_itoa(int n)
 	}
 	num = (n < 0) ? -n : n;
 	lenght = (n < 0) ? 1 : 0;
-	while (num /= 10 > 0)
+	while (num > 0)
+	{
+		num = num / 10;
 		lenght++;
+	}
 	if (!(ptr = ft_strnew(lenght)))
 		return (NULL);
 	num = (n < 0) ? -n : n;
