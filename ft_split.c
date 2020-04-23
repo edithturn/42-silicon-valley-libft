@@ -6,68 +6,63 @@
 /*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/22 21:25:56 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/22 21:25:58 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/04/23 01:02:46 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t ft_countletters(char const *str, char c)
+static	size_t	ft_countletters(char const *str, char c)
 {
-	size_t count;
-	count = 0;
+	size_t	count;
 
-	while(str[count] != c  && str[count])
+	count = 0;
+	while (str[count] != c && str[count])
 		count++;
 	return (count);
 }
-static size_t ft_countwords(char const *str, char c)
+
+static	size_t	ft_countwords(char	const *str, char c)
 {
-	size_t count;
-	
+	size_t	count;
+
 	count = 0;
-	while(*str)
+	while (*str)
 	{
 		if (*str != c)
 		{
-			if(*(str + 1) == c || *(str + 1) == '\0')
+			if (*(str + 1) == c || *(str + 1) == '\0')
 				count++;
 		}
 		str++;
 	}
 	return (count);
 }
-char  **ft_split(char const *s, char c)
+
+char	**ft_split(char const *s, char c)
 {
 	char	**ptr;
 	size_t	i;
 	size_t	j;
-	size_t	count_words;
-	size_t count_letters;
 
-	i = 0;	
+	i = 0;
 	if (!s || !c)
 		return (NULL);
-	count_words = ft_countwords(s, c);
-	if (!(ptr = (char **)malloc(sizeof(char *) * (count_words + 1))))
+	if (!(ptr = (char **)malloc(sizeof(char *) * (ft_countwords(s, c) + 1))))
 		return (NULL);
-	while (i < count_words)
+	while (i < ft_countwords(s, c))
 	{
 		while (*s == c && *s)
 			s++;
-		count_letters = ft_countletters(s, c);
-		if(!(ptr[i] = (char *)malloc(sizeof(char) * (count_letters + 1))))
+		if (!(ptr[i] = (char *)malloc(sizeof(char) \
+			* (ft_countletters(s, c) + 1))))
 			return (NULL);
 		j = 0;
-		while (*s != c && *s)
-		{
-			ptr[i][j] = *s;
-			j++;
-			s++;
-		}
+		while (*s++ != c && *s)
+			ptr[i][j++] = *s;
 		ptr[i][j] = '\0';
 		i++;
 	}
 	ptr[i] = 0;
-	return (ptr);	
+	return (ptr);
 }
