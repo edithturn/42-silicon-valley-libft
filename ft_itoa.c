@@ -6,13 +6,13 @@
 /*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/22 20:13:31 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/23 14:58:44 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/04/23 14:59:35 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*is_number_zero(int n)
+char		*is_number_zero()
 {
 	char				*ptr;
 
@@ -27,7 +27,7 @@ char	*ft_itoa(int n)
 	size_t				lenght;
 
 	if (n == 0)
-		is_number_zero(n);
+		is_number_zero();
 	num = (n < 0) ? -n : n;
 	lenght = (n < 0) ? 1 : 0;
 	while (num > 0)
