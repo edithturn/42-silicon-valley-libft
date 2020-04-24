@@ -4,14 +4,14 @@ This project contains **basic C** functions for use in future projects.
 
 ## How to use libft
 
-This will be generate the static library called: **libft.a** and .o files
+This will be generate the static library called: **libft.a** and **.o** files
 
 ```bash
 cd 42-silicon-valley-libft
 make all
 ```
 
-**To clean use :**
+**To clean, use :**
 ```bash
 make clean
 make fclean
@@ -63,3 +63,7 @@ Functions for  Linked List
 | ft_lstsize  | ft_lstclear  |
 | ft_lstlast  | ft_lstclear  |
 | ft_lstmap  |   |
+
+Project Libft Download at : https://drive.google.com/file/d/1wC4ZB7N0yKdO8TjjlvD5sz87vJdpkosF/view?usp=sharing
+
+School: 42 Silicon Valley  Fremont, California
