@@ -1,39 +1,47 @@
 # C Library
 **C programming** can be very tedious when one doesn’t have access to those highly useful standard functions.
-This project Contains **basic C** functions for use in future projects.
+This project contains **basic C** functions for use in future projects.
 
-To use this library:
+## How to use libft
 
-```c
+```bash
 cd 42-silicon-valley-libft
 make all
 ```
-This will be generate the static library called: **libft.a**
+This will be generate the static library called: **libft.a** and .o files
+
+To clean
+```bash
+make clean
+make fclean
+```
 
 ## Libc functions  | First Part
 
-|||
-| ------------- | ------------- |
-| memset  | strrchr  |
-| bzero  | strnstr  |
-| memcpy  | strncmp  |
-| memccpy  | atoi  |
-| memmove  | isalpha  |
-| memchr  | isdigit  |
-| memcmp  | isalnum  |
-| strlen  | isascii  |
-| strlcpy  | isprint  |
-| strlcat  | toupper  |
-| strchr  | tolower  |
+Functions for String manipulation and String examination.
 
+||||
+| ------------- | ------------- | ------------- |
+| ft_strlcpy  | ft_isprint  | ft_strrchr  |
+| ft_strlcat  | ft_toupper  | ft_strnstr  |
+| ft_strchr  | ft_tolower  | ft_strlen  |
+|  ft_strncmp |   |   |
+| ft_memcpy  | ft_memcmp  | ft_memchr  |
+| ft_memset  |  ft_memmove | ft_memccpy  |
+| ft_isalpha  | ft_isdigit  | ft_isalnum  |
+| ft_bzero  | ft_atoi  | asda  |
 
 ## Functions  uses malloc
 
+Functions for Memory manipulation.
+
 |||
 | ------------- | ------------- |
-| calloc  | strdup  |
+| ft_calloc  | ft_strdup  |
 
 ## Additional functions | Second Part
+
+Funtions for Math Conversion
 
 |||
 | ------------- | ------------- |
@@ -45,6 +53,7 @@ This will be generate the static library called: **libft.a**
 
 ## Linklist functions | Bonus Part
 
+Functions for  Linked List
 |||
 | ------------- | ------------- |
 | ft_lstnew  | ft_lstadd_back  |

@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_ifzero.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/27 14:43:35 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/23 17:01:15 by epuclla          ###   ########.fr       */
+/*   Created: 2020/04/23 16:46:23 by epuclla           #+#    #+#             */
+/*   Updated: 2020/04/23 16:46:44 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int c)
+char		*ft_ifzero(void)
 {
-	if (c >= 'a' && c <= 'z')
-		return (c - 32);
-	else
-		return (c);
+	char				*ptr;
+
+	ptr = "0";
+	return (ft_strdup(ptr));
 }

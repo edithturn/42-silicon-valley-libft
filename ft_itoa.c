@@ -6,19 +6,11 @@
 /*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/22 20:13:31 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/23 15:11:14 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/04/23 16:46:52 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-char		*is_number_zero(void)
-{
-	char				*ptr;
-
-	ptr = "0";
-	return (ft_strdup(ptr));
-}
 
 char		*ft_itoa(int n)
 {
@@ -27,7 +19,7 @@ char		*ft_itoa(int n)
 	size_t				lenght;
 
 	if (n == 0)
-		return (is_number_zero());
+		return (ft_ifzero());
 	num = (n < 0) ? -n : n;
 	lenght = (n < 0) ? 1 : 0;
 	while (num > 0)

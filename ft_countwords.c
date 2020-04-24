@@ -1,21 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_countwords.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/27 14:43:35 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/23 17:01:15 by epuclla          ###   ########.fr       */
+/*   Created: 2020/04/23 16:50:29 by epuclla           #+#    #+#             */
+/*   Updated: 2020/04/23 16:58:24 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int c)
+size_t	ft_countwords(char const *str, char c)
 {
-	if (c >= 'a' && c <= 'z')
-		return (c - 32);
-	else
-		return (c);
+	size_t	count;
+
+	count = 0;
+	while (*str)
+	{
+		if (*str != c)
+		{
+			if (*(str + 1) == c || *(str + 1) == '\0')
+				count++;
+		}
+		str++;
+	}
+	return (count);
 }
