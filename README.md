@@ -4,13 +4,14 @@ This project contains **basic C** functions for use in future projects.
 
 ## How to use libft
 
+This will be generate the static library called: **libft.a** and .o files
+
 ```bash
 cd 42-silicon-valley-libft
 make all
 ```
-This will be generate the static library called: **libft.a** and .o files
 
-To clean
+**To clean use :**
 ```bash
 make clean
 make fclean
@@ -29,15 +30,16 @@ Functions for String manipulation and String examination.
 | ft_memcpy  | ft_memcmp  | ft_memchr  |
 | ft_memset  |  ft_memmove | ft_memccpy  |
 | ft_isalpha  | ft_isdigit  | ft_isalnum  |
-| ft_bzero  | ft_atoi  | asda  |
+| ft_bzero  | ft_atoi  |   |
 
-## Functions  uses malloc
+### Functions  using malloc
 
 Functions for Memory manipulation.
 
-|||
-| ------------- | ------------- |
-| ft_calloc  | ft_strdup  |
+||
+| ------------- |
+| ft_calloc  |
+| ft_strdup  |
 
 ## Additional functions | Second Part
 
