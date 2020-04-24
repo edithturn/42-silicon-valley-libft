@@ -6,7 +6,7 @@
 /*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/22 21:25:56 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/23 16:51:03 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/04/23 22:53:47 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char			**ft_split(char const *s, char c)
 	size_t	j;
 
 	i = 0;
-	if (!s || !c)
+	if (s == NULL)
 		return (NULL);
 	if (!(ptr = (char **)malloc(sizeof(char *) * (ft_countwords(s, c) + 1))))
 		return (NULL);
