@@ -6,7 +6,7 @@
 /*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/17 22:30:53 by edith             #+#    #+#             */
-/*   Updated: 2020/04/23 21:30:42 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/04/24 16:07:57 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,20 +26,28 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*node;
-	t_list	*new_node;
+	t_list		*new_head;
+	t_list		*current;
+	t_list		*next;
+	void		*new_content;
 
-	new_node = ft_lstnew(f(lst->content));
-	while (lst)
+	if (lst == NULL)
+		return (NULL);
+	new_content = f(lst);
+	new_head = ft_lstnew(new_content);
+	if (new_head == NULL)
+		del(new_content);
+	if (new_head == NULL)
+		return (NULL);
+	current = new_head;
+	lst = lst->next;
+	while (lst != NULL)
 	{
-		if(!(new_node))
-		{
-			ft_lstclear(&node, del);
-			ft_lstclear(&new_node, del);
-			return (NULL);
-		}
-		ft_lstadd_back(&node, new_node);
-		new_node = new_node->next;
+		next = ft_lstnew(f(lst));
+		current->next = next;
+		current = current->next;
+		lst = lst->next;
 	}
-	return (new_node);
+	current->next = NULL;
+	return (new_head);
 }

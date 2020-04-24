@@ -6,7 +6,7 @@
 /*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/23 21:17:00 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/23 22:42:00 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/04/23 23:29:47 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,8 @@ int main(void)
 {
 	t_list *next;
 	t_list *head;
-	t_list *l = ft_lstnew(ft_strdup("50"));
-	t_list *n = ft_lstnew(ft_strdup("40"));
+	t_list *l = ft_lstnew(ft_strdup("edith"));
+	t_list *n = ft_lstnew(ft_strdup("puclla"));
 	ft_lstadd_front(&l, n);
 	head = n;
 	ft_lstmap(head, (void *)add, del);
