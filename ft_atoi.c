@@ -6,7 +6,7 @@
 /*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/22 20:07:30 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/22 20:07:32 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/04/23 23:21:21 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,12 @@ int	ft_atoi(const char *str)
 		sign = -1;
 		i++;
 	}
+	else if (str[i]  == '+')
+		i++;
 	while (str[i] >= '0' && str[i] <= '9')
 	{
 		num = ((num * 10) + (str[i] - '0'));
 		i++;
 	}
-	return (sign * num);
+	return (sign * (int)num);
 }
