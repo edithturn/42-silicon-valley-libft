@@ -6,7 +6,7 @@
 /*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/17 22:30:53 by edith             #+#    #+#             */
-/*   Updated: 2020/04/24 16:07:57 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/04/24 16:41:05 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,27 +27,30 @@
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list		*new_head;
-	t_list		*current;
-	t_list		*next;
+	t_list		*current_node;
 	void		*new_content;
+	t_list		*next;
+
 
 	if (lst == NULL)
 		return (NULL);
-	new_content = f(lst);
-	new_head = ft_lstnew(new_content);
+	new_head = ft_lstnew(f(lst));
 	if (new_head == NULL)
-		del(new_content);
-	if (new_head == NULL)
+	{
+		del(f(lst));
 		return (NULL);
-	current = new_head;
+	}
+	if (new_head == NULL)
+		
+	current_node = new_head;
 	lst = lst->next;
 	while (lst != NULL)
 	{
 		next = ft_lstnew(f(lst));
-		current->next = next;
-		current = current->next;
+		current_node->next = next;
+		current_node = current_node->next;
 		lst = lst->next;
 	}
-	current->next = NULL;
+	current_node->next = NULL;
 	return (new_head);
 }
