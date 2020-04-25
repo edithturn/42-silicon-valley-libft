@@ -6,7 +6,7 @@
 /*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/10 23:54:12 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/23 17:01:24 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/04/25 09:06:47 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,16 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	if (*s1 == '\0')
 		return (NULL);
-	while (*s1 && ft_space(s1, set))
-		s1++;
+	if(ft_character(s1, set))
+	{
+		while ((*s1 && ft_character(s1, set)))
+			s1++;
+	}
+	if(ft_space(s1))
+	{
+		while (*s1 && ft_space(s1))
+			s1++;
+	}
 	if (ft_strlen(s1) == 0)
 		len = 0;
 	else

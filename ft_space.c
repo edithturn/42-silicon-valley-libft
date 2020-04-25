@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/04/23 16:54:28 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/23 17:13:45 by epuclla          ###   ########.fr       */
+/*   Created: 2020/04/25 00:54:38 by epuclla           #+#    #+#             */
+/*   Updated: 2020/04/25 09:06:57 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_space(char const *s, char const *set)
+int		ft_space(char const *s)
 {
-	return (*s == *set);
+	return (*s == '\n'  || *s == ' ' || *s == '\t');
 }

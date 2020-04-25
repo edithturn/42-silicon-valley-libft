@@ -1,19 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdel.c                                        :+:      :+:    :+:   */
+/*   ft_character.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/04/22 21:28:28 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/25 00:41:10 by epuclla          ###   ########.fr       */
+/*   Created: 2020/04/23 16:54:28 by epuclla           #+#    #+#             */
+/*   Updated: 2020/04/25 00:56:37 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strdel(char **as)
+int		ft_character(char const *s, char const *set)
 {
-	free(*as);
-	*as = 0;
+	return (*s == *set);
 }
