@@ -6,7 +6,7 @@
 /*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 09:57:51 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/25 09:07:05 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/04/25 11:12:36 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,8 +108,7 @@ int					ft_strcmp(const char *s1, const char *s2);
 int					ft_strequ(char const *s1, char const *s2);
 int					ft_strnequ(char const *s1, char const *s2, size_t n);
 size_t				ft_countletters(char const *str, char c);
-int					ft_space(char const *s);
-int					ft_character(char const *s, char const *set);
+int					ft_space_character(char const *s, char const *set);
 size_t				ft_countwords(char const *str, char c);
 char				*ft_ifzero(void);
 
