@@ -6,7 +6,7 @@
 /*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/16 22:35:56 by edith             #+#    #+#             */
-/*   Updated: 2020/04/25 17:04:36 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/04/25 17:58:13 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 int main(void)
 {
-	char *s =  "*hello*fellow***students*";
+	/*char *s =  "*hello*fellow***students*";*/
+	char *s = "                  olol";
 	char c = '*';
 	char **ptr;
 	int i;

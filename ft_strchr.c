@@ -6,7 +6,7 @@
 /*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/22 21:26:12 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/25 17:43:42 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/04/25 18:12:46 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,18 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int i;
+	unsigned char		r;
+	const unsigned char *ptr;
+	int 	i;
 
 	i = 0;
-	while (s[i] != (char)c)
+	r = (unsigned char)c;
+	ptr = (const unsigned char *)s;
+	while (s[i] != r)
 	{
 		if (!s[i])
 			return (NULL);
 		i++;
 	}
-	return ((char *)&s[i]);
+	return ((void *)ptr);
 }
