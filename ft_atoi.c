@@ -6,7 +6,7 @@
 /*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/22 20:07:30 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/24 00:46:13 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/04/26 12:52:05 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,21 +35,6 @@ int	ft_atoi(const char *str)
 		i++;
 	while (ft_isdigit(s[i]))
 	{
-		int INT_MAX = 2147483647;
-		int INT_MIN =  -2147483648;
-
-		if (num > INT_MAX || num < INT_MIN) { 
-			if (sign == 1) 
-			{
-				return 0; 
-				break;
-			}
-			else
-			{
-				return -1; 
-				break;
-			}
-        } 
 		num = ((num * 10) + (s[i] - '0'));
 		i++;
 	}
