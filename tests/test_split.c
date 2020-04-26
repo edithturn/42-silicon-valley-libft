@@ -6,7 +6,7 @@
 /*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/16 22:35:56 by edith             #+#    #+#             */
-/*   Updated: 2020/04/25 18:28:43 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/04/25 18:48:34 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 int main(void)
 {
 	/*char *s =  "*hello*fellow***students*";*/
-	char *s = "split  ||this|for|me|||||!|";
-	char c = '|';
+	char *s = "olol                     ";
+	char c = ' ';
 	char **ptr;
 	int i;
 
