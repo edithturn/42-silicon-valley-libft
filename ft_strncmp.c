@@ -6,7 +6,7 @@
 /*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 19:10:29 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/26 11:33:46 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/04/26 11:45:50 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 			s1++;
 			s2++;
 			n--;
-		}
-		else
-			return ((unsigned char*)s1 - (unsigned char*)s2);
+		}	
 	}
-	return (0);
+	return ((unsigned char*)s1 - (unsigned char*)s2);
 }
