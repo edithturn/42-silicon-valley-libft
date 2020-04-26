@@ -6,7 +6,7 @@
 /*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/10 23:54:12 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/26 12:49:52 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/04/26 12:55:41 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 {
 	char		*str;
 	char		*ptr;
-	const char	*final;	
+	const char	*final;
 
 	if (s1 == NULL)
 		return (NULL);

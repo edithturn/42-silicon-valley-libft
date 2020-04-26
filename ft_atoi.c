@@ -6,7 +6,7 @@
 /*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/22 20:07:30 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/26 12:52:05 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/04/26 12:57:47 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 int	ft_atoi(const char *str)
 {
 	int				i;
-	int		num;
-	int		sign;
-	char		*s;
+	int				num;
+	int				sign;
+	char			*s;
 
 	i = 0;
 	num = 0;
