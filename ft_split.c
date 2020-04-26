@@ -6,7 +6,7 @@
 /*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/22 21:25:56 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/25 18:24:56 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/04/25 18:31:19 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char			**ft_split(char const *s, char c)
 {
 	char	**ptr;
 	char	*final;
-	size_t	i;
+	unsigned int	i;
 
 	if (s == NULL)
 		return (NULL);
