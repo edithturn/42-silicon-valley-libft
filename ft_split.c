@@ -6,11 +6,28 @@
 /*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/22 21:25:56 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/26 13:07:48 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/04/26 14:03:50 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static	size_t	ft_countwords(char const *str, char c)
+{
+	size_t	count;
+
+	count = 0;
+	while (*str)
+	{
+		if (*str != c)
+		{
+			if (*(str + 1) == c || *(str + 1) == '\0')
+				count++;
+		}
+		str++;
+	}
+	return (count);
+}
 
 char			**ft_split(char const *s, char c)
 {

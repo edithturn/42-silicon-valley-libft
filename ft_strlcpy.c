@@ -6,11 +6,17 @@
 /*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/22 21:29:18 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/23 01:16:57 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/04/26 16:15:53 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+**The strlcpy() and strlcat() functions copy and concatenate strings
+**respectively.  They are designed to be safer, more consistent, and less
+**error prone replacements for strncpy(3) and strncat(3).
+*/
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {

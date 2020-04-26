@@ -6,11 +6,18 @@
 /*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/22 21:29:11 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/23 01:13:51 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/04/26 16:16:39 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+**strlcat() take the full size of the buffer (not
+**just the length) and guarantee to NUL-terminate the result (as long as
+**size is larger than 0 or, in the case of strlcat(), as long as there is
+**at least one byte free in dst).
+*/
 
 size_t	ft_strlcat(char *dest, const char *src, size_t n)
 {

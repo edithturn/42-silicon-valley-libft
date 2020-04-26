@@ -6,11 +6,17 @@
 /*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/22 21:26:27 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/23 02:07:10 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/04/26 16:13:04 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+**The  strcmp()  function compares the two strings s1 and s2.  It returns
+**an integer less than, equal to, or greater than zero if  s1  is  found,
+**respectively, to be less than, to match, or be greater than s2.
+*/
 
 int	ft_strcmp(const char *s1, const char *s2)
 {
