@@ -6,7 +6,7 @@
 /*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/22 21:25:56 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/25 18:31:19 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/04/25 18:35:40 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,29 +14,27 @@
 
 char			**ft_split(char const *s, char c)
 {
-	char	**ptr;
-	char	*final;
-	unsigned int	i;
+char				**new;
+	unsigned int		i;
+	char				*end;
 
-	if (s == NULL)
+	if (!s ||
+	(!(new = (char **)ft_memalloc(sizeof(char *) * (ft_countwords(s, c) + 1)))))
 		return (NULL);
-	if (!(ptr = (char **)malloc(sizeof(char *) * (ft_countwords(s, c) + 1))))
-		return (NULL);
-	
 	i = -1;
 	while (*s)
 	{
 		while ((*s == c) && *s)
-			s++;
+			++s;
 		if (*s)
 		{
-			if (!(final = ft_strchr(s, c)))
-				ptr[++i] = ft_substr(s, 0, ft_strlen(s));
+			if (!(end = ft_strchr(s, c)))
+				new[++i] = ft_substr(s, 0, ft_strlen(s));
 			else
-				ptr[++i] = ft_substr(s, 0, final - s);
+				new[++i] = ft_substr(s, 0, end - s);
 		}
 		while ((*s != c) && *s)
-			s++;
+			++s;
 	}
-	return (ptr);
+	return (new);
 }
