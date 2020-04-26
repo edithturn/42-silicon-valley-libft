@@ -6,7 +6,7 @@
 /*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/22 21:25:56 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/25 18:51:39 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/04/25 18:56:34 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char			**ft_split(char const *s, char c)
 {
 	char				**ptr;
 	unsigned int		i;
-	char				*end;
+	char				*final;
 	char 			*sbt;
 
 	if (!s ||
@@ -29,14 +29,14 @@ char			**ft_split(char const *s, char c)
 			++s;
 		if (*s)
 		{
-			if (!(end = ft_strchr(s, c)))
+			if (!(final = ft_strchr(s, c)))
 			{
 				sbt = ft_substr(s, 0, ft_strlen(s));
 				i++;
 				ptr[i] = sbt;
 			}
 			else
-				ptr[++i] = ft_substr(s, 0, end - s);
+				ptr[++i] = ft_substr(s, 0, final - s);
 		}
 		while ((*s != c) && *s)
 			++s;
