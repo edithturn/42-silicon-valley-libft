@@ -6,7 +6,7 @@
 /*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 19:16:20 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/22 21:40:41 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/04/26 12:18:38 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ int main()
 	s1 = "HolaMama";
 	s2 = "HolaMlaMa";
 	
-	printf("%d", ft_strncmp(s1, s2, n));
+	printf("%d\n", ft_strncmp(s1, s2, n));
+	printf("%d", strncmp(s1, s2, n));
+
 	return (0);
 }

@@ -6,26 +6,20 @@
 /*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 19:10:29 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/26 12:09:36 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/04/26 12:19:39 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-**The  strcmp()  function compares the two strings s1 and s2.  It returns
-**an integer less than, equal to, or greater than zero if  s1  is  found,
-**respectively, to be less than, to match, or be greater than s2
+**The  strncmp()  function  is similar, except it compares only the first
+**(at most) n bytes of s1 and s2.
 */
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	int	len;
-
-	len = (int)n;
-	if(n == 0)
-		return (0);
-	while ((*s1 && *s2 && (len > 0)))
+	while ((*s1 || *s2) && (n > 0))
 	{
 		if (*s1 == *s2)
 		{
@@ -34,7 +28,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 			n--;
 		}
 		else
-			return ((unsigned char*)s1 - (unsigned char*)s2);
+			return (*(unsigned char*)s1 - *(unsigned char*)s2);
 	}
 	return (0);
 }
