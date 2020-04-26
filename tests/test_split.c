@@ -6,7 +6,7 @@
 /*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/16 22:35:56 by edith             #+#    #+#             */
-/*   Updated: 2020/04/22 21:38:52 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/04/25 17:04:36 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int main(void)
 	while(ptr[i] != '\0')
 	{
 		printf("%s", ptr[i]);
-		printf("%s", ", ");
+		printf("%s", ",");
 		i++;
 	}
 	return (0);
