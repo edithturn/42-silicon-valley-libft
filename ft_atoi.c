@@ -6,7 +6,7 @@
 /*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/22 20:07:30 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/26 12:57:47 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/04/26 13:00:27 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	ft_atoi(const char *str)
 		sign = -1;
 		i++;
 	}
-	else if (s[i]  == '+')
+	else if (s[i] == '+')
 		i++;
 	while (ft_isdigit(s[i]))
 	{
