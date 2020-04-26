@@ -6,7 +6,7 @@
 /*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/22 21:25:56 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/25 18:03:29 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/04/25 18:22:04 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ char			**ft_split(char const *s, char c)
 	char	**ptr;
 	char	*final;
 	size_t	i;
-	size_t	j;
 
 	if (s == NULL)
 		return (NULL);
@@ -25,21 +24,19 @@ char			**ft_split(char const *s, char c)
 		return (NULL);
 	
 	i = -1;
-	j = 0;
-	while (s[j])
+	while (*s)
 	{
 		while ((*s == c) && *s)
 			s++;
-		if (s[j])
+		if (*s)
 		{
 			if (!(final = ft_strchr(s, c)))
 				ptr[++i] = ft_substr(s, 0, ft_strlen(s));
-			else
+			if ((final = ft_strchr(s, c)))
 				ptr[++i] = ft_substr(s, 0, final - s);
 		}
 		while ((*s != c) && *s)
 			s++;
-		j++;
 	}
 	return (ptr);
 }
