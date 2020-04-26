@@ -6,7 +6,7 @@
 /*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 19:10:29 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/26 11:28:42 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/04/26 11:33:46 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	if(n == 0)
 		return (0);
-	while (((*s1 && *s2) && (n > 0)))
+	while ((*s1 && *s2 && (n > 0)))
 	{
 		if (*s1 == *s2)
 		{
