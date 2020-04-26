@@ -6,7 +6,7 @@
 /*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/22 21:24:47 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/26 08:47:29 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/04/26 08:57:28 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,5 @@ void	*ft_memset(void *b, int c, size_t len)
 		*ub++ = crt;
 		len--;
 	}
-	ub = '\0';
-	return (b);
+	return (ub);
 }
