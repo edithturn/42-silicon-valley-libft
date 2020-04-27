@@ -6,7 +6,7 @@
 #    By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/01 19:14:09 by epuclla           #+#    #+#              #
-#    Updated: 2020/04/27 01:24:10 by epuclla          ###   ########.fr        #
+#    Updated: 2020/04/27 01:41:49 by epuclla          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,9 @@ SOURCES	= ft_isascii.c ft_isprint.c ft_isalpha.c ft_isdigit.c ft_isalnum.c \
 										ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
 										ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c ft_strmapi.c
 
-OBJETS = $(SOURCES:.c=.o)
+SRC = ft*.c
+
+OBJETS = $(SRC:.c=.o)
 
 BONUS_SOURCES = ft_lstsize.c ft_lstlast.c ft_lstadd_front.c ft_lstadd_back.c \
 														ft_lstnew.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c \
@@ -41,10 +43,14 @@ INCLUDES=./
 
 all:	$(NAME)
 
-$(NAME):	$(SOURCES) libft.h
-					@$(CC) $(CFLAGS) -I$(INCLUDES) -c $(SOURCES)
+$(NAME):	$(SRC) libft.h
+					@$(CC) $(CFLAGS) -I$(INCLUDES) -c $(SRC)
 					@ar rc $(NAME) $(OBJETS)
 					@ranlib $(NAME)
+
+bonus:		$(NAME) $(BONUS_OBJECTS)
+				@ar rc $(NAME) $(BONUS_OBJECTS)
+				@ranlib $(NAME)
 
 clean:
 				rm -f $(OBJETS)
