@@ -6,7 +6,7 @@
 #    By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/01 19:14:09 by epuclla           #+#    #+#              #
-#    Updated: 2020/04/27 08:10:37 by epuclla          ###   ########.fr        #
+#    Updated: 2020/04/27 09:03:45 by epuclla          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,7 +49,7 @@ $(NAME):	$(SRC) libft.h
 					@ranlib $(NAME)
 
 bonus:		$(BONUS_OBJECTS)
-				@ar rc $(BONUS_OBJECTS)
+				@ar rc $(NAME) $(BONUS_OBJECTS)
 				@ranlib $(NAME)
 
 clean:
