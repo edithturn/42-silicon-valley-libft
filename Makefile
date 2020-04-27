@@ -6,7 +6,7 @@
 #    By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/01 19:14:09 by epuclla           #+#    #+#              #
-#    Updated: 2020/04/27 01:11:10 by epuclla          ###   ########.fr        #
+#    Updated: 2020/04/27 01:24:10 by epuclla          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,6 @@ NAME = libft.a
 
 CFLAGS = -I . -Wall -Wextra -Werror
 
-INCLUDES=./
 
 SOURCES	= ft_isascii.c ft_isprint.c ft_isalpha.c ft_isdigit.c ft_isalnum.c \
 										ft_tolower.c ft_toupper.c ft_strlen.c ft_strlcpy.c ft_strlcat.c \
@@ -38,18 +37,13 @@ BONUS_SOURCES = ft_lstsize.c ft_lstlast.c ft_lstadd_front.c ft_lstadd_back.c \
 
 BONUS_OBJECTS = $(BONUS_SOURCES:.c=.o)
 
+INCLUDES=./
+
 all:	$(NAME)
 
 $(NAME):	$(SOURCES) libft.h
 					@$(CC) $(CFLAGS) -I$(INCLUDES) -c $(SOURCES)
 					@ar rc $(NAME) $(OBJETS)
-					@ranlib $(NAME)
-
-bonus:			$(NAME)
-
-$(NAME):	$(BONUS_SOURCES) libft.h
-					@$(CC) $(CFLAGS) -I$(INCLUDES) -c $(BONUS_SOURCES)
-					@ar rc $(NAME) $(BONUS_OBJECTS)
 					@ranlib $(NAME)
 
 clean:
