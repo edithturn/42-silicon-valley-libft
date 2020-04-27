@@ -6,15 +6,17 @@
 #    By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/01 19:14:09 by epuclla           #+#    #+#              #
-#    Updated: 2020/04/27 00:46:52 by epuclla          ###   ########.fr        #
+#    Updated: 2020/04/27 01:11:10 by epuclla          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = gcc
 
-CFLAGS = -Wall -Wextra -Werror
-
 NAME = libft.a
+
+CFLAGS = -I . -Wall -Wextra -Werror
+
+INCLUDES=./
 
 SOURCES	= ft_isascii.c ft_isprint.c ft_isalpha.c ft_isdigit.c ft_isalnum.c \
 										ft_tolower.c ft_toupper.c ft_strlen.c ft_strlcpy.c ft_strlcat.c \
@@ -38,16 +40,17 @@ BONUS_OBJECTS = $(BONUS_SOURCES:.c=.o)
 
 all:	$(NAME)
 
-$(NAME):	$(OBJETS) libft.h
-										ar -rcs $(NAME) $(OBJETS)
-										ranlib $(NAME)
+$(NAME):	$(SOURCES) libft.h
+					@$(CC) $(CFLAGS) -I$(INCLUDES) -c $(SOURCES)
+					@ar rc $(NAME) $(OBJETS)
+					@ranlib $(NAME)
 
-bonus:			$(NAME) $(BONUS_OBJECTS)
-										ar -rcs $(NAME) $(BONUS_OBJECTS)
-										ranlib $(NAME)
+bonus:			$(NAME)
 
-.c.o:
-				$(CC) $(CFLAGS) -I ./ -c $< -o $(<:.c=.o)
+$(NAME):	$(BONUS_SOURCES) libft.h
+					@$(CC) $(CFLAGS) -I$(INCLUDES) -c $(BONUS_SOURCES)
+					@ar rc $(NAME) $(BONUS_OBJECTS)
+					@ranlib $(NAME)
 
 clean:
 				rm -f $(OBJETS)
@@ -61,5 +64,3 @@ fclean: 	clean
 re: fclean all
 
 rebonus:	fclean bonus
-
-.PHONY:		all clean fclean re bonus rebonus
