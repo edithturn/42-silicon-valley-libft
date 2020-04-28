@@ -6,7 +6,7 @@
 #    By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/01 19:14:09 by epuclla           #+#    #+#              #
-#    Updated: 2020/04/28 13:51:37 by epuclla          ###   ########.fr        #
+#    Updated: 2020/04/28 14:17:49 by epuclla          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,3 +52,5 @@ fclean: 	clean
 	@rm -f $(NAME)
 
 re: fclean all
+
+.PHONY:		all clean fclean re bonus
