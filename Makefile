@@ -6,13 +6,13 @@
 #    By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/01 19:14:09 by epuclla           #+#    #+#              #
-#    Updated: 2020/04/27 21:08:38 by epuclla          ###   ########.fr        #
+#    Updated: 2020/04/27 21:35:38 by epuclla          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = gcc
 NAME = libft.a
-CFLAGS = -I . -Wall -Wextra -Werror -c
+CFLAGS = -Wall -Wextra -Werror -c
 
 SOURCES	= ft_isascii.c ft_isprint.c ft_isalpha.c ft_isdigit.c ft_isalnum.c \
 										ft_tolower.c ft_toupper.c ft_strlen.c ft_strlcpy.c ft_strlcat.c \
