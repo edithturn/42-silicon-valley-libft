@@ -6,7 +6,7 @@
 /*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 15:16:58 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/28 12:52:09 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/04/28 12:55:39 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@
 **The strnstr() function locates the first occurrence
 **of the null termi‐nated string little in the string
 **big, where not more than len characters
-**are searched. Characters that appear after a '\0'
-**character are not searched.
+**are searched. Characters that appear 
+**after a '\0' character are not searched.
 */
 
 char	*ft_strnstr(const char *src, const char *find, size_t n)
