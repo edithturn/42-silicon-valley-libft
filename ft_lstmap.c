@@ -6,7 +6,7 @@
 /*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/17 22:30:53 by edith             #+#    #+#             */
-/*   Updated: 2020/04/28 13:31:38 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/04/28 13:38:32 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,21 +28,19 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list		*new_head;
 	t_list		*current_node;
-	t_list		*next;
 
 	if (!lst)
 		return (NULL);
 	new_head = 0;
 	while (lst)
 	{
-		if(!(current_node = ft_lstnew(f(lst->content))))
+		if (!(current_node = ft_lstnew(f(lst->content))))
 		{
 			ft_lstclear(&new_head, del);
 			return (NULL);
 		}
 		ft_lstadd_back(&new_head, current_node);
-		lst = lst->next;;
-
+		lst = lst->next;
 	}
 	return (new_head);
 }
