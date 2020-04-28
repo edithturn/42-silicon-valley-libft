@@ -6,14 +6,13 @@
 #    By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/01 19:14:09 by epuclla           #+#    #+#              #
-#    Updated: 2020/04/27 19:01:23 by epuclla          ###   ########.fr        #
+#    Updated: 2020/04/27 20:54:11 by epuclla          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = gcc
 NAME = libft.a
-CFLAGS = -Wall -Wextra -Werror
-
+CFLAGS = -Wall -Wextra -Werror -c
 
 SOURCES	= ft_isascii.c ft_isprint.c ft_isalpha.c ft_isdigit.c ft_isalnum.c \
 										ft_tolower.c ft_toupper.c ft_strlen.c ft_strlcpy.c ft_strlcat.c \
@@ -36,22 +35,19 @@ OBJECTS_B = $(SOURCES_B:%.c=%.o)
 
 all: $(NAME)
 $(NAME):
-	@$(CC) $(CFLAGS) $(SOURCES) -I ./ 
+	@$(CC) $(CFLAGS) $(SOURCES) -I ./
 	@ar rc $(NAME) $(OBJETS)
 	@ranlib $(NAME)
 
 bonus:
-		@$(CC) $(CFLAGS)  $(SOURCES_B)  -I ./ 
-		@ar rc $(NAME) $(OBJECTS_B)
-		@ranlib $(NAME)
+	@$(CC) $(CFLAGS)  $(SOURCES_B)  -I ./
+	@ar rc $(NAME) $(OBJECTS_B)
+	@ranlib $(NAME)
 
 clean:
-		@rm -f $(OBJETS) $(OBJECTS_B)
+	@rm -f $(OBJETS) $(OBJECTS_B)
 
 fclean: 	clean
-		@rm -f $(NAME)
+	@rm -f $(NAME)
 
 re: fclean all
-
-testclall:
-	@rm test*
