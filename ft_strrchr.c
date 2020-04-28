@@ -6,14 +6,14 @@
 /*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/24 17:24:06 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/28 12:34:43 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/04/28 12:36:48 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-**The strrchr() function returns a
+**The strrchr function returns a
 **pointer to the last
 **occurrence of the character
 **c in the string s.
