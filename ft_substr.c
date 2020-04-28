@@ -6,7 +6,7 @@
 /*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/10 23:34:03 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/28 12:04:58 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/04/28 12:14:08 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 /*
 **Allocates (with malloc(3)) and returns a substring
 **from the string 's'.
-**The substring begins at index ’start’ and is of
+**The substring begins at index 'start' and is of
 **maximum size 'len'.
 **Parameters:
 **#1. The string from which to create the substring.
