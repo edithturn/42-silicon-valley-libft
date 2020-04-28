@@ -6,13 +6,13 @@
 #    By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/01 19:14:09 by epuclla           #+#    #+#              #
-#    Updated: 2020/04/27 20:54:11 by epuclla          ###   ########.fr        #
+#    Updated: 2020/04/27 21:08:38 by epuclla          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = gcc
 NAME = libft.a
-CFLAGS = -Wall -Wextra -Werror -c
+CFLAGS = -I . -Wall -Wextra -Werror -c
 
 SOURCES	= ft_isascii.c ft_isprint.c ft_isalpha.c ft_isdigit.c ft_isalnum.c \
 										ft_tolower.c ft_toupper.c ft_strlen.c ft_strlcpy.c ft_strlcat.c \
@@ -32,15 +32,16 @@ SOURCES_B = ft_lstsize.c ft_lstlast.c ft_lstadd_front.c ft_lstadd_back.c \
 
 OBJETS = $(SOURCES:%.c=%.o)
 OBJECTS_B = $(SOURCES_B:%.c=%.o)
+INCLUDES=./
 
 all: $(NAME)
 $(NAME):
-	@$(CC) $(CFLAGS) $(SOURCES) -I ./
+	@$(CC) $(CFLAGS) $(SOURCES) -I$(INCLUDES)
 	@ar rc $(NAME) $(OBJETS)
 	@ranlib $(NAME)
 
 bonus:
-	@$(CC) $(CFLAGS)  $(SOURCES_B)  -I ./
+	@$(CC) $(CFLAGS) $(SOURCES_B)  -I$(INCLUDES)
 	@ar rc $(NAME) $(OBJECTS_B)
 	@ranlib $(NAME)
 
