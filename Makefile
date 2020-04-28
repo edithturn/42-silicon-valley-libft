@@ -6,7 +6,7 @@
 #    By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/01 19:14:09 by epuclla           #+#    #+#              #
-#    Updated: 2020/04/28 14:17:49 by epuclla          ###   ########.fr        #
+#    Updated: 2020/04/28 16:44:18 by epuclla          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,13 +30,14 @@ SOURCES_B = ft_lstsize.c ft_lstlast.c ft_lstadd_front.c ft_lstadd_back.c \
 											ft_striteri_bonus.c ft_strmap_bonus.c ft_strncat_bonus.c ft_strncpy_bonus.c ft_strnequ_bonus.c  \
 											ft_strnew_bonus.c ft_strstr_bonus.c ft_strsub_bonus.c
 
-OBJETS = $(SOURCES:%.c=%.o)
+SRC = ft*.c
+OBJETS = $(SRC:%.c=%.o)
 OBJECTS_B = $(SOURCES_B:%.c=%.o)
 INCLUDES=./
 
 all: $(NAME)
 $(NAME):
-	@$(CC) $(CFLAGS) $(SOURCES) -I$(INCLUDES)
+	@$(CC) $(CFLAGS) $(SRC) -I$(INCLUDES)
 	@ar rc $(NAME) $(OBJETS)
 	@ranlib $(NAME)
 
