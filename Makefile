@@ -6,7 +6,7 @@
 #    By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/01 19:14:09 by epuclla           #+#    #+#              #
-#    Updated: 2020/04/27 18:21:53 by epuclla          ###   ########.fr        #
+#    Updated: 2020/04/27 19:01:23 by epuclla          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,9 +52,6 @@ fclean: 	clean
 		@rm -f $(NAME)
 
 re: fclean all
-
-test: 
-	@gcc -o test test*.c -L. -lft
 
 testclall:
 	@rm test*
