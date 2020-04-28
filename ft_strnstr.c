@@ -6,7 +6,7 @@
 /*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 15:16:58 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/26 15:44:12 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/04/28 12:04:01 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 /*
 **The strnstr() function locates the first occurrence of the null-termi‐
 **nated string little in the string big, where not more than len characters
-**are searched.  Characters that appear after a ‘\0’ character are not
+**are searched.  Characters that appear after a '\0' character are not
 **searched.
 */
 

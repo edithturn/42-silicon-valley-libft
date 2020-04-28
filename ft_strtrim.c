@@ -6,7 +6,7 @@
 /*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/10 23:54:12 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/26 16:20:12 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/04/28 12:04:34 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 /*
 ** Allocates (with malloc(3)) and returns a copy of
-** ’s1’ with the characters specified in ’set’ removed
+** 's1' with the characters specified in 'set' removed
 ** from the beginning and the end of the string.
 ** Parameters:
 ** #1. The string to be trimmed.

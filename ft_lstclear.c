@@ -6,7 +6,7 @@
 /*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/22 20:14:25 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/22 23:46:28 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/04/28 11:51:58 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 /*
 ** Deletes and frees the given element and every successor of that element,
-** using the function ’del’ and free(3).
+** using the function 'del' and free(3).
 ** Finally, the pointer to the list must be set to NULL.
 ** Parameters:
 ** #1. The adress of a pointer to an element.

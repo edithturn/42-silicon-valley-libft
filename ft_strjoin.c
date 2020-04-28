@@ -6,7 +6,7 @@
 /*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/22 21:29:05 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/26 16:15:40 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/04/28 12:02:00 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 /*
 **Allocates (with malloc(3)) and returns a new
 **string, which is the result of the concatenation
-**of ’s1’ and ’s2’.
+**of 's1' and 's2'.
 **Parameters:
 **#1. The prefix string.
 **#2. The suffix string.

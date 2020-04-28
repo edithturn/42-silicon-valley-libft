@@ -6,16 +6,16 @@
 /*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/17 22:30:53 by edith             #+#    #+#             */
-/*   Updated: 2020/04/25 00:28:41 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/04/28 11:53:09 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Iterates the list ’lst’ and applies the function ’f’ to the content
+** Iterates the list 'lst' and applies the function 'f' to the content
 ** of each element. Creates a new list resulting of the successive
-** applications of the function ’f’. The ’del’ function is used to
+** applications of the function 'f'. The 'del' function is used to
 ** delete the content of an element if needed.
 ** Parameters:
 ** #1. The adress of a pointer to an element.
