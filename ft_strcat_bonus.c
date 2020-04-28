@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_strcat_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/22 21:26:04 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/26 16:16:28 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/04/28 12:42:10 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-**The  strcat() function appends the src string to the dest string, over‐
-**writing the terminating null byte ('\0') at the end of dest,  and  then
-**adds  a  terminating  null  byte.
+**The  strcat() function appends the src string to the dest string,
+**over‐**writing the terminating null byte ('\0') at the 
+**end of dest,  and  then **adds  a  terminating  null  byte.
 */
 
 char	*ft_strcat(char *str1, const char *str2)
