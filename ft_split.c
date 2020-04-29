@@ -6,7 +6,7 @@
 /*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/22 21:25:56 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/29 14:30:45 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/04/29 15:02:54 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,17 @@ static	size_t	ft_countwords(char const *str, char c)
 	return (count);
 }
 
+static	void	*ft_memalloc(size_t size)
+{
+	char *ptr;
+
+	ptr = (char *)malloc(sizeof(char) * size);
+	if (ptr == NULL)
+		return (NULL);
+	ft_bzero(ptr, size);
+	return (ptr);
+}
+
 char			**ft_split(char const *s, char c)
 {
 	char				**ptr;
@@ -36,7 +47,7 @@ char			**ft_split(char const *s, char c)
 	char				*final;
 
 	if (!s ||
-	(!(ptr = malloc(sizeof(char *) * (ft_countwords(s, c) + 1)))))
+	(!(ptr = (char **)ft_memalloc(sizeof(char *) * (ft_countwords(s, c) + 1)))))
 		return (NULL);
 	i = -1;
 	while (*s)
