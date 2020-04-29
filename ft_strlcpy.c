@@ -6,7 +6,7 @@
 /*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/22 21:29:18 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/26 16:15:53 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/04/29 12:35:34 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,21 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	if (!dst && !src)
+	size_t zsrc;
+	size_t i;
+
+	i = 0;
+	if (!dst || !src)
 		return (0);
-	if (size == 0)
-		return (ft_strlen(src));
-	if (ft_strlen(src) < size)
-		ft_strcpy(dst, src);
-	else
-		ft_strncpy(dst, src, size - 1);
-	dst[size - 1] = '\0';
-	return (ft_strlen(src));
+	zsrc = ft_strlen(src);
+	if (size != 0)
+	{
+		while (src[i] != '\0' && i < (size - 1))
+		{
+			dst[i] = src[i];
+			i++;
+		}
+		dst[i] = '\0';
+	}
+	return (zsrc);
 }

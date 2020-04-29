@@ -6,7 +6,7 @@
 /*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 09:57:51 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/27 00:48:54 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/04/29 14:22:11 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,30 +83,5 @@ void				ft_lstdelone(t_list *lst, void (*del)(void *));
 void				ft_lstclear(t_list **lst, void (*del)(void *));
 void				ft_lstiter(t_list *lst, void (*f)(void *));
 int					ft_lstsize(t_list *lst);
-/*
-**  Extra functions
-*/
-char				*ft_strcpy(char *dest, const char *src);
-char				*ft_strncpy(char *dst, const char *src, size_t len);
-char				*ft_strncat(char *str1, const char *str2, size_t n);
-char				*ft_strstr(const char *str, const char *to_find);
-char				*ft_strnew(size_t size);
-char				*ft_strmap(char const *s, char (*f)(char));
-char				*ft_strsub(char const *s, unsigned int start, size_t len);
-void				*ft_memalloc(size_t size);
-void				ft_memdel(void **ap);
-void				ft_putchar(char c);
-void				ft_putstr(char const *c);
-void				ft_putnbr(int nbr);
-void				ft_putendl(char const *s);
-void				ft_striter(char *s, void (*f)(char *));
-void				ft_striteri(char *s, void (*f)(unsigned int, char *));
-int					ft_strcmp(const char *s1, const char *s2);
-int					ft_strequ(char const *s1, char const *s2);
-int					ft_strnequ(char const *s1, char const *s2, size_t n);
-char				*ft_ifzero(void);
-char				*ft_strcat(char *str1, const char *str2);
-void				ft_strdel(char **as);
-void				ft_strclr(char *s);
 
 #endif

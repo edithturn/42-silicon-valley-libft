@@ -6,7 +6,7 @@
 /*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/10 23:10:38 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/28 12:03:29 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/04/29 14:35:00 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,18 @@
 **#2. The function to apply to each character.
 */
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+static		char	*ft_strnew(size_t size)
+{
+	char *ptr;
+
+	ptr = (char *)malloc(sizeof(char) * size);
+	if (ptr == NULL)
+		return (NULL);
+	ft_bzero(ptr, size);
+	return (ptr);
+}
+
+char				*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	int			i;
 	char		*ptr;

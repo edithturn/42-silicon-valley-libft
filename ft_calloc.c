@@ -6,7 +6,7 @@
 /*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/26 22:43:23 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/27 00:37:52 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/04/29 13:24:22 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,13 @@
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	return (ft_memalloc(nmemb * size));
+	char	*ptr;
+	size_t	total_size;
+
+	total_size = nmemb * size;
+	ptr = malloc(total_size);
+	if (!(ptr))
+		return (NULL);
+	ft_memset(ptr, 0, total_size);
+	return (ptr);
 }

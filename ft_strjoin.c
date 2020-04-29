@@ -6,7 +6,7 @@
 /*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/22 21:29:05 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/28 12:02:00 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/04/29 14:28:06 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,26 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char *ptr;
+	char	*ptr;
+	int		i;
+	int		j;
 
-	if (s1 == NULL || s2 == NULL)
+	i = 0;
+	j = 0;
+	if (s1 == NULL || s2 == NULL || !(ptr = (char *)malloc(ft_strlen(s1)
+		+ ft_strlen(s2) + 1)))
 		return (NULL);
-	ptr = ft_strnew(ft_strlen(s1) + ft_strlen(s2) + 1);
-	if (ptr == NULL)
-		return (NULL);
-	ft_strcpy(ptr, s1);
-	ft_strcat(ptr, s2);
+	while (s1[i] != '\0')
+	{
+		ptr[i] = s1[i];
+		i++;
+	}
+	while (s2[j] != '\0')
+	{
+		ptr[i] = s2[j];
+		i++;
+		j++;
+	}
+	ptr[i] = '\0';
 	return (ptr);
 }

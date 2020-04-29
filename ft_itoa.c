@@ -6,13 +6,32 @@
 /*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/22 20:13:31 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/23 16:46:52 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/04/29 14:24:36 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*ft_itoa(int n)
+static		char		*ft_ifzero(void)
+{
+	char				*ptr;
+
+	ptr = "0";
+	return (ft_strdup(ptr));
+}
+
+static			char	*ft_strnew(size_t size)
+{
+	char *ptr;
+
+	ptr = (char *)malloc(sizeof(char) * size);
+	if (ptr == NULL)
+		return (NULL);
+	ft_bzero(ptr, size);
+	return (ptr);
+}
+
+char					*ft_itoa(int n)
 {
 	char				*ptr;
 	unsigned		int	num;
