@@ -6,7 +6,7 @@
 /*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/10 23:54:12 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/29 14:34:25 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/04/29 15:16:34 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 ** #2. The reference set of characters to trim.
 */
 
-static	char	*ft_strnew(size_t size)
+static	void	*ft_memalloc(size_t size)
 {
 	char *ptr;
 
@@ -29,6 +29,14 @@ static	char	*ft_strnew(size_t size)
 	if (ptr == NULL)
 		return (NULL);
 	ft_bzero(ptr, size);
+	return (ptr);
+}
+
+static	char	*ft_strnew(size_t size)
+{
+	char *ptr;
+
+	ptr = ft_memalloc(sizeof(char) * size + 1);
 	return (ptr);
 }
 
