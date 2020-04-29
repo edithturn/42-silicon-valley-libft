@@ -6,7 +6,7 @@
 /*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/10 23:10:38 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/29 16:26:23 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/04/29 16:50:17 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 **#2. The function to apply to each character.
 */
 
-static	void	*ft_memalloc(size_t size)
+static	void		*ft_memalloc(size_t size)
 {
 	char *ptr;
 
@@ -32,7 +32,7 @@ static	void	*ft_memalloc(size_t size)
 	return (ptr);
 }
 
-static	char	*ft_strnew(size_t size)
+static	char		*ft_strnew(size_t size)
 {
 	char *ptr;
 
