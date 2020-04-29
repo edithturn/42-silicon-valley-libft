@@ -6,7 +6,7 @@
 /*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/10 23:10:38 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/29 14:35:00 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/04/29 16:26:23 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,22 @@
 **#2. The function to apply to each character.
 */
 
-static		char	*ft_strnew(size_t size)
+static	void	*ft_memalloc(size_t size)
 {
 	char *ptr;
 
-	ptr = (char *)malloc(sizeof(char) * size);
+	ptr = malloc(size);
 	if (ptr == NULL)
 		return (NULL);
 	ft_bzero(ptr, size);
+	return (ptr);
+}
+
+static	char	*ft_strnew(size_t size)
+{
+	char *ptr;
+
+	ptr = ft_memalloc(sizeof(char) * size + 1);
 	return (ptr);
 }
 
