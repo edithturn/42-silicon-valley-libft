@@ -6,7 +6,7 @@
 /*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/10 23:54:12 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/29 15:16:34 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/04/29 15:33:15 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static	void	*ft_memalloc(size_t size)
 {
 	char *ptr;
 
-	ptr = (char *)malloc(sizeof(char) * size);
+	ptr = malloc(size);
 	if (ptr == NULL)
 		return (NULL);
 	ft_bzero(ptr, size);
