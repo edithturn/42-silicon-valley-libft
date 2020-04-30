@@ -6,7 +6,7 @@
 /*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/22 20:15:03 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/28 12:13:13 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/04/29 17:11:37 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 		return ;
 	while (lst)
 	{
-		f(lst->content);
-		next = lst->next;
-		lst = next;
+	/*	f(lst->content);
+	/*	next = lst->next;
+	/*	lst = next;*/
 	}
 }
