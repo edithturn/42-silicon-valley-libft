@@ -78,7 +78,7 @@ gcc test_lstnew.c ../ft_lstnew.c
 ./a.out
 ```
 
-## EVALUATED BY MOULINETTE
+## Evaluated by moulinette
 
 ```diff 
 + success
