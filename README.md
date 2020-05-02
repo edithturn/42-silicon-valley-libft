@@ -69,7 +69,6 @@ Functions for  Linked List
 | ft_lstlast  | ft_lstclear  |
 | ft_lstmap  |   |
 
-
 ## Basic tests
 ```bash
 cd 42-silicon-valley-libft/tests
@@ -95,5 +94,5 @@ gcc test_lstnew.c ../ft_lstnew.c
 + test_ft_strtrim: OK | test_ft_substr: OK | test_ft_tolower: OK | test_ft_toupper: OK | bonus: 9/9 functions correct
 ```
 
-Libft Pdf Project Download at :
- https://drive.google.com/file/d/1wC4ZB7N0yKdO8TjjlvD5sz87vJdpkosF/view?usp=sharing
+[Libft Pdf Project new curriculum](https://drive.google.com/file/d/1wC4ZB7N0yKdO8TjjlvD5sz87vJdpkosF/view?usp=sharing)
+ 
