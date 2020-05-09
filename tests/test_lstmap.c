@@ -6,7 +6,7 @@
 /*   By: epuclla <epuclla@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/23 21:17:00 by epuclla           #+#    #+#             */
-/*   Updated: 2020/04/23 23:29:47 by epuclla          ###   ########.fr       */
+/*   Updated: 2020/05/08 22:10:39 by epuclla          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char *add(void *cont)
     {  
 		char *t;
 		t = "TE";
-		ptr = ft_strcat(cont, t);
+		ptr = ft_strjoin(cont, t);
      }
 	 return (ptr);
 }
